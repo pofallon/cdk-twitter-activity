@@ -1,0 +1,39 @@
+{
+  "name": "subscription-lambda",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Paul O'Fallon <pofallon@users.noreply.github.com>",
+  "homepage": "https://github.com/get2knowio/twitter-subscription-cdk/tree/master/packages/subscription#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/get2knowio/twitter-subscription-cdk.git"
+  },
+  "scripts": {
+    "build": "tsc --outDir . lib/*.ts",
+    "watch": "tsc -w",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/get2knowio/twitter-subscription-cdk/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.639.0",
+    "axios": "^0.19.2",
+    "oauth-1.0a": "^2.2.6"
+  }
+}

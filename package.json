@@ -1,0 +1,22 @@
+{
+  "name": "twitter-subscription-cdk",
+  "version": "1.0.0",
+  "description": "AWS CDK constructs for subscribing to the Twitter Account Activity API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/get2knowio/twitter-subscription-cdk.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/get2knowio/twitter-subscription-cdk/issues"
+  },
+  "homepage": "https://github.com/get2knowio/twitter-subscription-cdk#readme",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
