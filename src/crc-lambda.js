@@ -1,15 +1,15 @@
 import * as AWS from 'aws-sdk'
 import * as crypto from 'crypto'
 
-let secret: string
+let secret
 
-const getSecret = async () : Promise <string> => {
+const getSecret = async () => {
   let ssm = new AWS.SSM()
-  let response = await ssm.getParameter({Name: process.env.SECRET_PARAMETER_NAME!, WithDecryption: true}).promise()
-  return response.Parameter?.Value ?? ''
+  let response = await ssm.getParameter({Name: process.env.SECRET_PARAMETER_NAME, WithDecryption: true}).promise()
+  return response.Parameter.Value
 }
 
-export const handler = async (event: any = {}) : Promise <any> => {
+export const handler = async (event) => {
 
   console.log(event)
 

@@ -1,5 +1,0 @@
-*.js
-!*.config.js
-*.d.ts
-node_modules
-dist

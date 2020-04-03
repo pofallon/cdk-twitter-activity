@@ -6,7 +6,6 @@ import * as apigateway from '@aws-cdk/aws-apigateway'
 import * as cdk from '@aws-cdk/core'
 import * as path from 'path'
 import { Webhook } from './webhook'
-import { Duration } from '@aws-cdk/core'
 
 const defaultProps = {
   keyParameterName: 'consumer_key',
@@ -41,7 +40,7 @@ export class Subscription extends cdk.Construct {
     const onEvent = new lambda.Function(this, 'SubscriptionLambda', {
       logRetention: 7,
       runtime: lambda.Runtime.NODEJS_12_X,
-      timeout: Duration.seconds(10),
+      timeout: cdk.Duration.seconds(10),
       environment: {
         'KEY_PARAMETER_NAME': properties.keyParameterName,
         'SECRET_PARAMETER_NAME': properties.secretParameterName,
@@ -50,7 +49,7 @@ export class Subscription extends cdk.Construct {
         'ENVIRONMENT_NAME': properties.environmentName
       },
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../../subscription-lambda/dist'))
+      code: lambda.Code.fromAsset(path.join(__dirname, '../dist/subscription-lambda'))
     })
 
     ssm.StringParameter.fromSecureStringParameterAttributes(this, 'keyParameter', {
@@ -77,7 +76,7 @@ export class Subscription extends cdk.Construct {
       onEventHandler: onEvent
     })
 
-    const customResource = new cfn.CustomResource(this, 'Subscription', { provider, properties: { webhookUrl }})
+    const customResource = new cfn.CustomResource(this, 'Subscription', { provider, properties: { webhookUrl } })
     customResource.node.addDependency(webhook)  // Don't create the subscription until the webhook is ready
 
   }
