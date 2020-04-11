@@ -1,4 +1,4 @@
-import * as AWS from 'aws-sdk'
+const AWS = require('aws-sdk')
 const { TwitterClient } = require('twttr')
 
 const environment = process.env.ENVIRONMENT_NAME
@@ -42,7 +42,7 @@ const remove = async (id, twitter) => {
 
 }
 
-export const handler = async (event) => {
+module.exports.handler = async (event) => {
 
   twitter = twitter || await getTwitter()
   

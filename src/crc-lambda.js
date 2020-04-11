@@ -1,5 +1,5 @@
-import * as AWS from 'aws-sdk'
-import * as crypto from 'crypto'
+const AWS = require('aws-sdk')
+const crypto = require('crypto')
 
 let secret
 
@@ -9,7 +9,7 @@ const getSecret = async () => {
   return response.Parameter.Value
 }
 
-export const handler = async (event) => {
+module.exports.handler = async (event) => {
 
   console.log(event)
 
