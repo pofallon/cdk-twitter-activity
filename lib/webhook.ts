@@ -36,8 +36,8 @@ export class Webhook extends cdk.Construct {
     })
     parameter.grantRead(crcLambda.role!)
 
-    const webhookIntegration = new apigateway.LambdaIntegration(crcLambda, {})
-    props.resource.addMethod('GET', webhookIntegration, {
+    const crcIntegration = new apigateway.LambdaIntegration(crcLambda, {})
+    props.resource.addMethod('GET', crcIntegration, {
       requestParameters: { 'method.request.querystring.crc_token': true },
       methodResponses: [ { statusCode: '200' } ]
     })
