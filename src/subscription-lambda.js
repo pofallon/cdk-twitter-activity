@@ -1,5 +1,5 @@
-import { Twitter } from './twitter'
 import * as AWS from 'aws-sdk'
+const { TwitterClient } = require('twttr')
 
 const environment = process.env.ENVIRONMENT_NAME
 let twitter
@@ -12,12 +12,11 @@ const getTwitter = async () => {
     process.env.ACCESS_TOKEN_NAME, 
     process.env.ACCESS_TOKEN_SECRET_NAME
   ], WithDecryption: true}).promise()
-  let key = response.Parameters.find(p => p.Name === process.env.KEY_PARAMETER_NAME).Value
-  let secret = response.Parameters.find(p => p.Name === process.env.SECRET_PARAMETER_NAME).Value
-  let token = response.Parameters.find(p => p.Name === process.env.ACCESS_TOKEN_NAME).Value
-  let tokenSecret = response.Parameters.find(p => p.Name === process.env.ACCESS_TOKEN_SECRET_NAME).Value
-  let t = new Twitter(key, secret)
-  t.token = { key: token, secret: tokenSecret }
+  let consumerKey = response.Parameters.find(p => p.Name === process.env.KEY_PARAMETER_NAME).Value
+  let consumerSecret = response.Parameters.find(p => p.Name === process.env.SECRET_PARAMETER_NAME).Value
+  let accessToken = response.Parameters.find(p => p.Name === process.env.ACCESS_TOKEN_NAME).Value
+  let accessTokenSecret = response.Parameters.find(p => p.Name === process.env.ACCESS_TOKEN_SECRET_NAME).Value
+  let t = new TwitterClient({ consumerKey, consumerSecret, accessToken, accessTokenSecret })
   return(t)
 }
 
