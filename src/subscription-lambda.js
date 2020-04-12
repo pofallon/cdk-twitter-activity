@@ -22,6 +22,8 @@ const getTwitter = async () => {
 
 const create = async (props, twitter) => {
 
+  console.log(`Attempting to register webhook ${props.WebhookUrl}`)
+
   let url = `1.1/account_activity/all/${environment}/webhooks.json?url=${encodeURIComponent(props.WebhookUrl)}`
   try {
     var response = await twitter.post(url, {})
