@@ -27,6 +27,7 @@ const create = async (props, twitter) => {
   let url = `1.1/account_activity/all/${environment}/webhooks.json?url=${encodeURIComponent(props.WebhookUrl)}`
   try {
     var response = await twitter.post(url, {})
+    await twitter.post(`1.1/account_activity/all/${environment}/subscriptions.json`)
   } catch (e) {
     console.log('Error:')
     console.log(e.response.data)
