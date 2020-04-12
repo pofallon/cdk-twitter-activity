@@ -4,7 +4,7 @@
   "description": "AWS CDK constructs for subscribing to the Twitter Account Activity API",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && webpack",
     "install": "webpack",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
