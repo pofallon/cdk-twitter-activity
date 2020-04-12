@@ -4,6 +4,13 @@ const { TwitterClient } = require('twttr')
 const environment = process.env.ENVIRONMENT_NAME
 let twitter
 
+// https://tech.mybuilder.com/handling-retries-and-back-off-attempts-with-javascript-promises/
+const pause = (duration) => new Promise(res => setTimeout(res, duration));
+const backoff = (retries, fn, delay = 500) =>
+  fn().catch(err => retries > 1
+    ? pause(delay).then(() => backoff(retries - 1, fn, delay * 2))
+    : Promise.reject(err));
+
 const getTwitter = async () => {
   let ssm = new AWS.SSM()
   let response = await ssm.getParameters({Names: [
@@ -26,7 +33,7 @@ const create = async (props, twitter) => {
 
   let url = `1.1/account_activity/all/${environment}/webhooks.json?url=${encodeURIComponent(props.WebhookUrl)}`
   try {
-    var response = await twitter.post(url, {})
+    var response = await backoff(5, () => twitter.post(url), 2000)
     await twitter.post(`1.1/account_activity/all/${environment}/subscriptions.json`)
   } catch (e) {
     console.log('Error:')

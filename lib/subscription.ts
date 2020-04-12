@@ -40,7 +40,7 @@ export class Subscription extends cdk.Construct {
     const onEvent = new lambda.Function(this, 'SubscriptionLambda', {
       logRetention: 7,
       runtime: lambda.Runtime.NODEJS_12_X,
-      timeout: cdk.Duration.seconds(10),
+      timeout: cdk.Duration.seconds(60),
       environment: {
         'KEY_PARAMETER_NAME': properties.keyParameterName,
         'SECRET_PARAMETER_NAME': properties.secretParameterName,
