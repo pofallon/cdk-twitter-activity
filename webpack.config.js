@@ -3,7 +3,8 @@ var path = require('path');
 module.exports = {
   entry: {
     'crc-lambda': './src/crc-lambda.js',
-    'subscription-lambda': './src/subscription-lambda.js'
+    'subscription-lambda': './src/subscription-lambda.js',
+    'authorizer-lambda': './src/authorizer-lambda.js'
   },
   mode: 'production',
   externals: {

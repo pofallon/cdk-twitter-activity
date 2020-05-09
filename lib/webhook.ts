@@ -10,18 +10,16 @@ const defaultProps = {
 
 export interface WebhookProps {
   secretParameterName?: string
-  resource: apigateway.IResource
+  api: apigateway.RestApi
+  integration: apigateway.Integration
 }
 
 export class Webhook extends cdk.Construct {
-
-  resource: apigateway.IResource
 
   constructor(scope: cdk.Construct, id: string, props: WebhookProps) {
     super(scope, id)
 
     const properties = Object.assign({}, defaultProps, props)
-    this.resource = props.resource
 
     const crcLambda = new lambda.Function(this, 'CrcLambda', {
       logRetention: 7,
@@ -37,8 +35,30 @@ export class Webhook extends cdk.Construct {
     parameter.grantRead(crcLambda.role!)
 
     const crcIntegration = new apigateway.LambdaIntegration(crcLambda, {})
-    props.resource.addMethod('GET', crcIntegration, {
+    props.api.root.addMethod('GET', crcIntegration, {
       requestParameters: { 'method.request.querystring.crc_token': true },
+      methodResponses: [ { statusCode: '200' } ]
+    })
+
+    const authLambda = new lambda.Function(this, 'AuthLambda', {
+      logRetention: 7,
+      runtime: lambda.Runtime.NODEJS_12_X,
+      environment: { 'SECRET_PARAMETER_NAME': properties.secretParameterName },
+      handler: 'index.handler',
+      code: lambda.Code.fromAsset(path.join(__dirname, '../dist/authorizer-lambda'))
+    })
+    parameter.grantRead(authLambda.role!)
+
+    const auth = new apigateway.RequestAuthorizer(this, 'webhookAuthorizer', {
+      handler: authLambda,
+      identitySources: [
+        apigateway.IdentitySource.header('X-Twitter-Webhooks-Signature')
+      ],
+    })
+
+    props.api.root.addMethod('POST', props.integration, { 
+      authorizationType: apigateway.AuthorizationType.CUSTOM,
+      authorizer: auth,
       methodResponses: [ { statusCode: '200' } ]
     })
 

@@ -16,7 +16,9 @@ const defaultProps = {
 }
 
 export interface SubscriptionProps {
-  resource: apigateway.IResource
+  api: apigateway.RestApi
+  // webhookUrl: string,
+  integration: apigateway.Integration
   keyParameterName?: string
   secretParameterName?: string
   accessTokenName?: string
@@ -29,12 +31,15 @@ export class Subscription extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props: SubscriptionProps) {
     super(scope, id)
 
-    const webhookUrl = props.resource.restApi.urlForPath(props.resource.path)
+    // const webhookUrl = props.webhookUrl
+    const webhookUrl = props.api.urlForPath(props.api.root.path)
+    
     const properties = Object.assign({}, defaultProps, props)
 
     const webhook = new Webhook(this, 'SubscriptionWebhook', {
       secretParameterName: properties.secretParameterName,
-      resource: properties.resource
+      api: properties.api,
+      integration: properties.integration
     })
 
     const onEvent = new lambda.Function(this, 'SubscriptionLambda', {

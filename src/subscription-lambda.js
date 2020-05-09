@@ -67,4 +67,4 @@ module.exports.handler = async (event) => {
       throw new Error(`Invalid request type '${event['RequestType']}'`)
   }
 
-};
+}
