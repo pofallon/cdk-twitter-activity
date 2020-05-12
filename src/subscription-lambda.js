@@ -14,15 +14,15 @@ const backoff = (retries, fn, delay = 500) =>
 const getTwitter = async () => {
   let ssm = new AWS.SSM()
   let response = await ssm.getParameters({Names: [
-    process.env.KEY_PARAMETER_NAME, 
-    process.env.SECRET_PARAMETER_NAME, 
-    process.env.ACCESS_TOKEN_NAME, 
-    process.env.ACCESS_TOKEN_SECRET_NAME
+    '/twitter/consumer_api_key', 
+    '/twitter/consumer_api_secret_key', 
+    '/twitter/access_token', 
+    '/twitter/access_token_secret'
   ], WithDecryption: true}).promise()
-  let consumerKey = response.Parameters.find(p => p.Name === process.env.KEY_PARAMETER_NAME).Value
-  let consumerSecret = response.Parameters.find(p => p.Name === process.env.SECRET_PARAMETER_NAME).Value
-  let accessToken = response.Parameters.find(p => p.Name === process.env.ACCESS_TOKEN_NAME).Value
-  let accessTokenSecret = response.Parameters.find(p => p.Name === process.env.ACCESS_TOKEN_SECRET_NAME).Value
+  let consumerKey = response.Parameters.find(p => p.Name === '/twitter/consumer_api_key').Value
+  let consumerSecret = response.Parameters.find(p => p.Name === '/twitter/consumer_api_secret_key').Value
+  let accessToken = response.Parameters.find(p => p.Name === '/twitter/access_token').Value
+  let accessTokenSecret = response.Parameters.find(p => p.Name === '/twitter/access_token_secret').Value
   let t = new TwitterClient({ consumerKey, consumerSecret, accessToken, accessTokenSecret })
   return(t)
 }
