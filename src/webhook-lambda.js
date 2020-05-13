@@ -38,18 +38,23 @@ module.exports.handler = async (event) => {
 
     } else {
 
-      const parsedBody = JSON.parse(event.body)
+      // TODO: Parse body keys for detail/*_events for a DetailType
+      // const parsedBody = JSON.parse(event.body)
 
-      await eventbridge.putEvents({
+      let results = await eventbridge.putEvents({
         Entries: [
           {
               Detail: event.body,
-              EventBusName: process.env.EVENTBUS_NAME
+              EventBusName: process.env.EVENTBUS_NAME,
+              Source: process.env.EVENT_SOURCE,
+              DetailType: 'twitter-activity'
           }
         ]
       }).promise()
 
-      console.log(`Successfully PUT event to ${process.env.EVENTBUS_NAME}`)
+      if (results.FailedEntryCount > 0) {
+        console.log(results)
+      }
 
       return { statusCode: 200 }
 

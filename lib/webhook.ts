@@ -21,7 +21,8 @@ export class Webhook extends cdk.Construct {
       runtime: lambda.Runtime.NODEJS_12_X,
       handler: 'index.handler',
       environment: {
-        EVENTBUS_NAME: props.eventBus.eventBusName
+        EVENTBUS_NAME: props.eventBus.eventBusName,
+        EVENT_SOURCE: cdk.Aws.STACK_NAME
       },
       code: lambda.Code.fromAsset(path.join(__dirname, '../dist/webhook-lambda'))
     })
