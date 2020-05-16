@@ -1,0 +1,12 @@
+*.ts
+!*.d.ts
+
+/src/**
+
+webpack.config.js
+tsconfig.json
+tslint.json
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

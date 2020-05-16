@@ -1,0 +1,10 @@
+lib/*.js
+*.d.ts
+node_modules
+dist
+
+.DS_Store
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

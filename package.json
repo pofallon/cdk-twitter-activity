@@ -1,0 +1,47 @@
+{
+  "name": "twitter-eventsource-cdk",
+  "version": "1.0.0",
+  "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc && webpack",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pofallon/twitter-eventsource-cdk.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pofallon/twitter-eventsource-cdk/issues"
+  },
+  "homepage": "https://github.com/pofallon/twitter-eventsource-cdk#readme",
+  "devDependencies": {
+    "@aws-cdk/assert": "1.38.0",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "jest": "^26.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.5.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.2"
+  },
+  "peerDependencies": {
+    "@aws-cdk/core": "1.38.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2": "^1.38.0",
+    "@aws-cdk/aws-cloudformation": "^1.38.0",
+    "@aws-cdk/aws-events": "^1.38.0",
+    "@aws-cdk/aws-lambda": "^1.38.0",
+    "@aws-cdk/core": "1.38.0",
+    "@aws-cdk/custom-resources": "^1.38.0",
+    "aws-sdk": "^2.677.0",
+    "ip-cidr": "^2.0.12",
+    "twttr": "^1.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
