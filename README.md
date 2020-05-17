@@ -24,15 +24,15 @@ With this is in place you can create rules matching Twitter [activity events](ht
 
 1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.
 
-1.  Install this project as a dependency with `npm install --save twitter-eventsource-cdk`.
+1.  Install this project as a dependency with `npm install --save twitter-activity-eventsource-cdk`.
 
 1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:
 
     ```typescript
-    import * as twitter from 'twitter-eventsource-cdk'
+    import * as activity from 'twitter-activity-eventsource-cdk'
     
     // Inside stack constructor:
-    const source = new twitter.EventSource(this, 'ActivityEventSource')
+    const source = new activity.EventSource(this, 'ActivityEventSource')
     ```
 
 1.  If this is the first time using CDK in your AWS account, run `npx cdk bootstrap` before deploying.
