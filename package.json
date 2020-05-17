@@ -12,7 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/pofallon/twitter-activity-eventsource-cdk.git"
   },
-  "author": "",
+  "keywords": ["cdk", "twitter", "eventbridge"],
+  "author": "Paul O'Fallon (https://www.get2know.io)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pofallon/twitter-activity-eventsource-cdk/issues"
