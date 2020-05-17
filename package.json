@@ -1,5 +1,5 @@
 {
-  "name": "twitter-eventsource-cdk",
+  "name": "twitter-activity-eventsource-cdk",
   "version": "1.0.0",
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "main": "lib/index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pofallon/twitter-eventsource-cdk.git"
+    "url": "git+https://github.com/pofallon/twitter-activity-eventsource-cdk.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pofallon/twitter-eventsource-cdk/issues"
+    "url": "https://github.com/pofallon/twitter-activity-eventsource-cdk/issues"
   },
-  "homepage": "https://github.com/pofallon/twitter-eventsource-cdk#readme",
+  "homepage": "https://github.com/pofallon/twitter-activity-eventsource-cdk#readme",
   "devDependencies": {
     "@aws-cdk/assert": "1.38.0",
     "@types/jest": "^25.2.2",
