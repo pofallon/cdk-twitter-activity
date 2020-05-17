@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/pofallon/twitter-activity-eventsource-cdk.git"
   },
-  "keywords": ["cdk", "twitter", "eventbridge"],
+  "keywords": [
+    "cdk",
+    "twitter",
+    "eventbridge"
+  ],
   "author": "Paul O'Fallon (https://www.get2know.io)",
   "license": "MIT",
   "bugs": {
@@ -20,26 +24,26 @@
   },
   "homepage": "https://github.com/pofallon/twitter-activity-eventsource-cdk#readme",
   "devDependencies": {
-    "@aws-cdk/assert": "1.38.0",
+    "@aws-cdk/assert": "1.39.0",
     "@types/jest": "^25.2.2",
     "@types/node": "^14.0.1",
     "jest": "^26.0.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^25.5.1",
+    "ts-jest": "^26.0.0",
     "tslint": "^6.1.2",
     "typescript": "^3.9.2"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "1.38.0"
+    "@aws-cdk/core": "1.39.0"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.38.0",
-    "@aws-cdk/aws-cloudformation": "^1.38.0",
-    "@aws-cdk/aws-events": "^1.38.0",
-    "@aws-cdk/aws-lambda": "^1.38.0",
-    "@aws-cdk/core": "1.38.0",
-    "@aws-cdk/custom-resources": "^1.38.0",
-    "aws-sdk": "^2.677.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.39.0",
+    "@aws-cdk/aws-cloudformation": "^1.39.0",
+    "@aws-cdk/aws-events": "^1.39.0",
+    "@aws-cdk/aws-lambda": "^1.39.0",
+    "@aws-cdk/core": "1.39.0",
+    "@aws-cdk/custom-resources": "^1.39.0",
+    "aws-sdk": "^2.678.0",
     "ip-cidr": "^2.0.12",
     "twttr": "^1.0.0",
     "webpack": "^4.43.0",
