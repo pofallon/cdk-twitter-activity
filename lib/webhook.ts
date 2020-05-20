@@ -6,7 +6,7 @@ import * as apigateway from '@aws-cdk/aws-apigatewayv2'
 import * as path from 'path'
 
 export interface WebhookProps {
-  eventBus: events.IEventBus
+  readonly eventBus: events.IEventBus
 }
 
 export class Webhook extends cdk.Construct {

@@ -6,8 +6,8 @@ import * as cdk from '@aws-cdk/core'
 import * as path from 'path'
 
 export interface SubscriptionProps {
-  webhookUrl: string,
-  environmentName?: string
+  readonly webhookUrl: string,
+  readonly environmentName?: string
 }
 
 export class Subscription extends cdk.Construct {
