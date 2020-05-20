@@ -27,7 +27,7 @@ export class Webhook extends cdk.Construct {
       code: lambda.Code.fromAsset(path.join(__dirname, '../dist/webhook-lambda'))
     })
     events.EventBus.grantPutEvents(handler.role!)
-    
+
     const parameter = ssm.StringParameter.fromSecureStringParameterAttributes(this, 'ConsumerSecretParameter', {
       parameterName: '/twitter/consumer_api_secret_key',
       version: 1

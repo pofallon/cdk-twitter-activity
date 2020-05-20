@@ -37,6 +37,7 @@ export class Subscription extends cdk.Construct {
       onEventHandler: onEvent
     })
 
+    // tslint:disable-next-line:no-unused-expression
     new cfn.CustomResource(this, 'SubscriptionResource', { provider, properties: { webhookUrl } })
 
   }
