@@ -6,7 +6,14 @@
 webpack.config.js
 tsconfig.json
 tslint.json
+.devcontainer
 
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# Exclude jsii outdir
+dist
+
+# Include .jsii
+!.jsii

@@ -1,0 +1,789 @@
+{
+  "author": {
+    "name": "Paul O'Fallon",
+    "roles": [
+      "author"
+    ],
+    "url": "https://www.get2know.io"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2": "^1.41.0",
+    "@aws-cdk/aws-cloudformation": "^1.41.0",
+    "@aws-cdk/aws-events": "^1.41.0",
+    "@aws-cdk/aws-lambda": "^1.41.0",
+    "@aws-cdk/core": "1.41.0",
+    "@aws-cdk/custom-resources": "^1.41.0",
+    "constructs": "^3.0.3"
+  },
+  "dependencyClosure": {
+    "@aws-cdk/assets": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.Assets",
+          "packageId": "Amazon.CDK.Assets",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdk-assets",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.assets"
+        },
+        "js": {
+          "npm": "@aws-cdk/assets"
+        },
+        "python": {
+          "distName": "aws-cdk.assets",
+          "module": "aws_cdk.assets"
+        }
+      }
+    },
+    "@aws-cdk/aws-apigatewayv2": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.APIGatewayv2",
+          "packageId": "Amazon.CDK.AWS.APIGatewayv2",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "apigatewayv2",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.apigatewayv2"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-apigatewayv2"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-apigatewayv2",
+          "module": "aws_cdk.aws_apigatewayv2"
+        }
+      }
+    },
+    "@aws-cdk/aws-cloudformation": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.CloudFormation",
+          "packageId": "Amazon.CDK.AWS.CloudFormation",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cloudformation",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.cloudformation"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-cloudformation"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-cloudformation",
+          "module": "aws_cdk.aws_cloudformation"
+        }
+      }
+    },
+    "@aws-cdk/aws-cloudwatch": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.CloudWatch",
+          "packageId": "Amazon.CDK.AWS.CloudWatch",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cloudwatch",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.cloudwatch"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-cloudwatch"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-cloudwatch",
+          "module": "aws_cdk.aws_cloudwatch"
+        }
+      }
+    },
+    "@aws-cdk/aws-ec2": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.EC2",
+          "packageId": "Amazon.CDK.AWS.EC2",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "ec2",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.ec2"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-ec2"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-ec2",
+          "module": "aws_cdk.aws_ec2"
+        }
+      }
+    },
+    "@aws-cdk/aws-events": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Events",
+          "packageId": "Amazon.CDK.AWS.Events",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "events",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.events"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-events"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-events",
+          "module": "aws_cdk.aws_events"
+        }
+      }
+    },
+    "@aws-cdk/aws-iam": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.IAM",
+          "packageId": "Amazon.CDK.AWS.IAM",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "iam",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.iam"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-iam"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-iam",
+          "module": "aws_cdk.aws_iam"
+        }
+      }
+    },
+    "@aws-cdk/aws-kms": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.KMS",
+          "packageId": "Amazon.CDK.AWS.KMS",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "kms",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.kms"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-kms"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-kms",
+          "module": "aws_cdk.aws_kms"
+        }
+      }
+    },
+    "@aws-cdk/aws-lambda": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Lambda",
+          "packageId": "Amazon.CDK.AWS.Lambda",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "lambda",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.lambda"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-lambda"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-lambda",
+          "module": "aws_cdk.aws_lambda"
+        }
+      }
+    },
+    "@aws-cdk/aws-logs": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Logs",
+          "packageId": "Amazon.CDK.AWS.Logs",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "logs",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.logs"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-logs"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-logs",
+          "module": "aws_cdk.aws_logs"
+        }
+      }
+    },
+    "@aws-cdk/aws-s3": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.S3",
+          "packageId": "Amazon.CDK.AWS.S3",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "s3",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.s3"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-s3"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-s3",
+          "module": "aws_cdk.aws_s3"
+        }
+      }
+    },
+    "@aws-cdk/aws-s3-assets": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.S3.Assets",
+          "packageId": "Amazon.CDK.AWS.S3.Assets",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "s3-assets",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.s3.assets"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-s3-assets"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-s3-assets",
+          "module": "aws_cdk.aws_s3_assets"
+        }
+      }
+    },
+    "@aws-cdk/aws-sns": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.SNS",
+          "packageId": "Amazon.CDK.AWS.SNS",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "sns",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.sns"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-sns"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-sns",
+          "module": "aws_cdk.aws_sns"
+        }
+      }
+    },
+    "@aws-cdk/aws-sqs": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.SQS",
+          "packageId": "Amazon.CDK.AWS.SQS",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "sqs",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.sqs"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-sqs"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-sqs",
+          "module": "aws_cdk.aws_sqs"
+        }
+      }
+    },
+    "@aws-cdk/aws-ssm": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.SSM",
+          "packageId": "Amazon.CDK.AWS.SSM",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "ssm",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.ssm"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-ssm"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-ssm",
+          "module": "aws_cdk.aws_ssm"
+        }
+      }
+    },
+    "@aws-cdk/cdk-assets-schema": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.CdkAssets.Schema",
+          "packageId": "Amazon.CDK.CdkAssets.Schema",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdk-assets-schema",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.cdkassets.schema"
+        },
+        "js": {
+          "npm": "@aws-cdk/cdk-assets-schema"
+        },
+        "python": {
+          "distName": "aws-cdk.cdk-assets-schema",
+          "module": "aws_cdk.cdk_assets_schema"
+        }
+      }
+    },
+    "@aws-cdk/cloud-assembly-schema": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.CloudAssembly.Schema",
+          "packageId": "Amazon.CDK.CloudAssembly.Schema",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdk-cloud-assembly-schema",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.cloudassembly.schema"
+        },
+        "js": {
+          "npm": "@aws-cdk/cloud-assembly-schema"
+        },
+        "python": {
+          "distName": "aws-cdk.cloud-assembly-schema",
+          "module": "aws_cdk.cloud_assembly_schema"
+        }
+      }
+    },
+    "@aws-cdk/core": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK",
+          "packageId": "Amazon.CDK",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "core",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.core"
+        },
+        "js": {
+          "npm": "@aws-cdk/core"
+        },
+        "python": {
+          "distName": "aws-cdk.core",
+          "module": "aws_cdk.core"
+        }
+      }
+    },
+    "@aws-cdk/custom-resources": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.CustomResources",
+          "packageId": "Amazon.CDK.AWS.CustomResources",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdk-customresources",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.customresources"
+        },
+        "js": {
+          "npm": "@aws-cdk/custom-resources"
+        },
+        "python": {
+          "distName": "aws-cdk.custom-resources",
+          "module": "aws_cdk.custom_resources"
+        }
+      }
+    },
+    "@aws-cdk/cx-api": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.CXAPI",
+          "packageId": "Amazon.CDK.CXAPI",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdk-cx-api",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.cxapi"
+        },
+        "js": {
+          "npm": "@aws-cdk/cx-api"
+        },
+        "python": {
+          "distName": "aws-cdk.cx-api",
+          "module": "aws_cdk.cx_api"
+        }
+      }
+    },
+    "@aws-cdk/region-info": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.RegionInfo",
+          "packageId": "Amazon.CDK.RegionInfo",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdk-region-info",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.regioninfo"
+        },
+        "js": {
+          "npm": "@aws-cdk/region-info"
+        },
+        "python": {
+          "distName": "aws-cdk.region-info",
+          "module": "aws_cdk.region_info"
+        }
+      }
+    },
+    "constructs": {
+      "targets": {
+        "dotnet": {
+          "namespace": "Constructs",
+          "packageId": "Constructs"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "constructs",
+            "groupId": "software.constructs"
+          },
+          "package": "software.constructs"
+        },
+        "js": {
+          "npm": "constructs"
+        },
+        "python": {
+          "distName": "constructs",
+          "module": "constructs"
+        }
+      }
+    }
+  },
+  "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
+  "homepage": "https://github.com/pofallon/twitter-activity-eventsource-cdk#readme",
+  "jsiiVersion": "1.5.0 (build 46538f8)",
+  "keywords": [
+    "cdk",
+    "twitter",
+    "eventbridge"
+  ],
+  "license": "MIT",
+  "name": "twitter-activity-eventsource-cdk",
+  "readme": {
+    "markdown": "# twitter-activity-eventsource-cdk\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nThis construct creates a series of AWS resources to receive Twitter activity and publish it to an EventBus.  It also includes a custom resource to create (and destroy) the Twitter Activity API subscription along with the AWS infrastructure.\n\nA complete deployment looks like this:\n\n![Application Flow](flow.png)\n\nWith this is in place you can create rules matching Twitter [activity events](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/account-activity-data-objects) and route them to any EventBridge [supported target](https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html).\n\n## Usage\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an App with Consumer API keys as well as an Access token and secret.\n\n1.  Next, create an Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.\n\n1.  Install this project as a dependency with `npm install --save twitter-activity-eventsource-cdk`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n    ```typescript\n    import * as activity from 'twitter-activity-eventsource-cdk'\n\n    // Inside stack constructor:\n    const source = new activity.EventSource(this, 'ActivityEventSource')\n    ```\n\n1.  If this is the first time using CDK in your AWS account, run `npx cdk bootstrap` before deploying.\n\n1.  Finally, run `npx cdk deploy` and enjoy!\n\n## How it works\n\n* A custom EventBus named `twitter-activity` is created.\n* An API Gateway HTTP endpoint is also created, with all requests routed to a lambda for processing.\n* This lambda does the heavy lifting (along with a few [security](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/securing-webhooks) functions):\n    * Ensuring requests originate from Twitter's IP range\n    * Answering Twitter's periodic challenge-response checks\n    * Validating the signature header for activity POSTs\n    * Sending this activity to the EventBus with a`DetailType` matching the [Activity message type](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/account-activity-data-objects)\n* Finally, a custom resource creates the Twitter Activity API subscription using the above HTTP endpoint as the webhook.\n\n## To Do\n\n* Write tests! :neutral_face:\n* Support other CDK languages (beyond just TypeScript).\n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pofallon/twitter-activity-eventsource-cdk.git"
+  },
+  "schema": "jsii/0.10.0",
+  "targets": {
+    "dotnet": {
+      "namespace": "get2know.cdk.TwitterActivityEventSource",
+      "packageId": "get2know.cdk.TwitterActivityEventSource"
+    },
+    "java": {
+      "maven": {
+        "artifactId": "twitter-activity-eventsource",
+        "groupId": "io.get2know.cdk"
+      },
+      "package": "io.get2know.cdk.TwitterActivityEventSource"
+    },
+    "js": {
+      "npm": "twitter-activity-eventsource-cdk"
+    },
+    "python": {
+      "distName": "get2know.cdk.twitter-activity-eventsource",
+      "module": "get2know.cdk.twitter-activity-eventsource"
+    }
+  },
+  "types": {
+    "twitter-activity-eventsource-cdk.EventSource": {
+      "assembly": "twitter-activity-eventsource-cdk",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "twitter-activity-eventsource-cdk.EventSource",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/eventsource.ts",
+        "line": 6
+      },
+      "name": "EventSource",
+      "properties": [
+        {
+          "locationInModule": {
+            "filename": "lib/eventsource.ts",
+            "line": 8
+          },
+          "name": "eventBus",
+          "type": {
+            "fqn": "@aws-cdk/aws-events.IEventBus"
+          }
+        }
+      ]
+    },
+    "twitter-activity-eventsource-cdk.Subscription": {
+      "assembly": "twitter-activity-eventsource-cdk",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "twitter-activity-eventsource-cdk.Subscription",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "twitter-activity-eventsource-cdk.SubscriptionProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/subscription.ts",
+        "line": 13
+      },
+      "name": "Subscription"
+    },
+    "twitter-activity-eventsource-cdk.SubscriptionProps": {
+      "assembly": "twitter-activity-eventsource-cdk",
+      "datatype": true,
+      "fqn": "twitter-activity-eventsource-cdk.SubscriptionProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/subscription.ts",
+        "line": 8
+      },
+      "name": "SubscriptionProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/subscription.ts",
+            "line": 9
+          },
+          "name": "webhookUrl",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/subscription.ts",
+            "line": 10
+          },
+          "name": "environmentName",
+          "optional": true,
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "twitter-activity-eventsource-cdk.Webhook": {
+      "assembly": "twitter-activity-eventsource-cdk",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "twitter-activity-eventsource-cdk.Webhook",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "twitter-activity-eventsource-cdk.WebhookProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/webhook.ts",
+        "line": 12
+      },
+      "name": "Webhook",
+      "properties": [
+        {
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 14
+          },
+          "name": "webhookUrl",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "twitter-activity-eventsource-cdk.WebhookProps": {
+      "assembly": "twitter-activity-eventsource-cdk",
+      "datatype": true,
+      "fqn": "twitter-activity-eventsource-cdk.WebhookProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/webhook.ts",
+        "line": 8
+      },
+      "name": "WebhookProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 9
+          },
+          "name": "eventBus",
+          "type": {
+            "fqn": "@aws-cdk/aws-events.IEventBus"
+          }
+        }
+      ]
+    }
+  },
+  "version": "1.0.0",
+  "fingerprint": "wU1zTrQ1+jEiKABlnN9m8RQWkPC2mtD1jV43C6lGqLs="
+}

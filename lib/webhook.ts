@@ -24,7 +24,7 @@ export class Webhook extends cdk.Construct {
         EVENTBUS_NAME: props.eventBus.eventBusName,
         EVENT_SOURCE: cdk.Aws.STACK_NAME
       },
-      code: lambda.Code.fromAsset(path.join(__dirname, '../dist/webhook-lambda'))
+      code: lambda.Code.fromAsset(path.join(__dirname, '../lambda-dist/webhook-lambda'))
     })
     events.EventBus.grantPutEvents(handler.role!)
 

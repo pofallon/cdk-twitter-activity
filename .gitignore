@@ -2,9 +2,12 @@ lib/*.js
 *.d.ts
 node_modules
 dist
+lambda-dist
 
 .DS_Store
 
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+tsconfig.json

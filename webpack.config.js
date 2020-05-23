@@ -14,7 +14,7 @@ module.exports = {
   },
   target: 'node',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'lambda-dist'),
     filename: '[name]/index.js',
     libraryTarget: 'umd'
   }

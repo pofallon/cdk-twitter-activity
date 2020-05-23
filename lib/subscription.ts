@@ -25,7 +25,7 @@ export class Subscription extends cdk.Construct {
         'ENVIRONMENT_NAME': props.environmentName || 'test'
       },
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../dist/subscription-lambda'))
+      code: lambda.Code.fromAsset(path.join(__dirname, '../lambda-dist/subscription-lambda'))
     })
 
     ssm.StringParameter.fromSecureStringParameterAttributes(this, 'CredentialParameters', {

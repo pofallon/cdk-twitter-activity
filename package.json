@@ -3,9 +3,33 @@
   "version": "1.0.0",
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "python": {
+        "distName": "twitter_activity_eventsource_cdk",
+        "module": "twitter_activity_eventsource"
+      },
+      "java": {
+        "package": "io.get2know.cdk.TwitterActivityEventSource",
+        "maven": {
+          "groupId": "io.get2know.cdk",
+          "artifactId": "twitter-activity-eventsource"
+        }
+      },
+      "dotnet": {
+        "namespace": "get2know.cdk.TwitterActivityEventSource",
+        "packageId": "get2know.cdk.TwitterActivityEventSource"
+      }
+    }
+  },
   "scripts": {
-    "build": "tsc && webpack",
-    "clean": "rimraf dist",
+    "prebuild": "webpack",
+    "build": "jsii",
+    "watch": "jsii -w",
+    "package": "jsii-pacmak",
+    "clean": "rimraf dist lambda-dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,29 +48,37 @@
   },
   "homepage": "https://github.com/pofallon/twitter-activity-eventsource-cdk#readme",
   "devDependencies": {
-    "@aws-cdk/assert": "1.39.0",
-    "@types/jest": "^25.2.2",
-    "@types/node": "^14.0.1",
+    "@aws-cdk/assert": "1.41.0",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.5",
     "jest": "^26.0.1",
+    "jsii": "^1.5.0",
+    "jsii-pacmak": "^1.5.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.0.0",
     "tslint": "^6.1.2",
-    "typescript": "^3.9.2"
-  },
-  "peerDependencies": {
-    "@aws-cdk/core": "1.39.0"
-  },
-  "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.39.0",
-    "@aws-cdk/aws-cloudformation": "^1.39.0",
-    "@aws-cdk/aws-events": "^1.39.0",
-    "@aws-cdk/aws-lambda": "^1.39.0",
-    "@aws-cdk/core": "1.39.0",
-    "@aws-cdk/custom-resources": "^1.39.0",
-    "aws-sdk": "^2.678.0",
+    "typescript": "^3.9.3",
+    "aws-sdk": "^2.683.0",
     "ip-cidr": "^2.0.12",
     "twttr": "^1.0.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
+  },
+  "peerDependencies": {
+    "@aws-cdk/core": "1.41.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.41.0",
+    "@aws-cdk/aws-cloudformation": "^1.41.0",
+    "@aws-cdk/aws-events": "^1.41.0",
+    "@aws-cdk/aws-lambda": "^1.41.0",
+    "@aws-cdk/custom-resources": "^1.41.0",
+    "constructs": "^3.0.3"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2": "^1.41.0",
+    "@aws-cdk/aws-cloudformation": "^1.41.0",
+    "@aws-cdk/aws-events": "^1.41.0",
+    "@aws-cdk/aws-lambda": "^1.41.0",
+    "@aws-cdk/core": "1.41.0",
+    "@aws-cdk/custom-resources": "^1.41.0"
   }
 }
