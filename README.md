@@ -1,7 +1,7 @@
 # twitter-activity-eventsource-cdk
 [AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)
 
-For more detail, see the [wiki](/wiki)
+For more detail, see the [wiki](https://github.com/pofallon/twitter-activity-eventsource-cdk/wiki)
 
 ## Usage
 
