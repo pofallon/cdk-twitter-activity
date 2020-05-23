@@ -1,13 +1,7 @@
 # twitter-activity-eventsource-cdk
 [AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)
 
-This construct creates a series of AWS resources to receive Twitter activity and publish it to an EventBus.  It also includes a custom resource to create (and destroy) the Twitter Activity API subscription along with the AWS infrastructure.
-
-A complete deployment looks like this:
-
-![Application Flow](flow.png)
-
-With this is in place you can create rules matching Twitter [activity events](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/account-activity-data-objects) and route them to any EventBridge [supported target](https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html).
+For more detail, see the [wiki](wiki)
 
 ## Usage
 
@@ -39,18 +33,6 @@ With this is in place you can create rules matching Twitter [activity events](ht
 
 1.  Finally, run `npx cdk deploy` and enjoy!
 
-## How it works
-
-* A custom EventBus named `twitter-activity` is created.
-* An API Gateway HTTP endpoint is also created, with all requests routed to a lambda for processing.
-* This lambda does the heavy lifting (along with a few [security](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/securing-webhooks) functions):
-    * Ensuring requests originate from Twitter's IP range
-    * Answering Twitter's periodic challenge-response checks
-    * Validating the signature header for activity POSTs
-    * Sending this activity to the EventBus with a`DetailType` matching the [Activity message type](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/account-activity-data-objects)
-* Finally, a custom resource creates the Twitter Activity API subscription using the above HTTP endpoint as the webhook.
-
 ## To Do
 
 * Write tests! :neutral_face:
-* Support other CDK languages (beyond just TypeScript).
