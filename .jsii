@@ -575,7 +575,7 @@
   "license": "MIT",
   "name": "twitter-activity-eventsource-cdk",
   "readme": {
-    "markdown": "# twitter-activity-eventsource-cdk\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nThis construct creates a series of AWS resources to receive Twitter activity and publish it to an EventBus.  It also includes a custom resource to create (and destroy) the Twitter Activity API subscription along with the AWS infrastructure.\n\nA complete deployment looks like this:\n\n![Application Flow](flow.png)\n\nWith this is in place you can create rules matching Twitter [activity events](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/account-activity-data-objects) and route them to any EventBridge [supported target](https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html).\n\n## Usage\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an App with Consumer API keys as well as an Access token and secret.\n\n1.  Next, create an Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.\n\n1.  Install this project as a dependency with `npm install --save twitter-activity-eventsource-cdk`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n    ```typescript\n    import * as activity from 'twitter-activity-eventsource-cdk'\n\n    // Inside stack constructor:\n    const source = new activity.EventSource(this, 'ActivityEventSource')\n    ```\n\n1.  If this is the first time using CDK in your AWS account, run `npx cdk bootstrap` before deploying.\n\n1.  Finally, run `npx cdk deploy` and enjoy!\n\n## How it works\n\n* A custom EventBus named `twitter-activity` is created.\n* An API Gateway HTTP endpoint is also created, with all requests routed to a lambda for processing.\n* This lambda does the heavy lifting (along with a few [security](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/securing-webhooks) functions):\n    * Ensuring requests originate from Twitter's IP range\n    * Answering Twitter's periodic challenge-response checks\n    * Validating the signature header for activity POSTs\n    * Sending this activity to the EventBus with a`DetailType` matching the [Activity message type](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/account-activity-data-objects)\n* Finally, a custom resource creates the Twitter Activity API subscription using the above HTTP endpoint as the webhook.\n\n## To Do\n\n* Write tests! :neutral_face:\n* Support other CDK languages (beyond just TypeScript).\n"
+    "markdown": "# twitter-activity-eventsource-cdk\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nFor more detail, see the [wiki](https://github.com/pofallon/twitter-activity-eventsource-cdk/wiki)\n\n## Usage\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an App with Consumer API keys as well as an Access token and secret.\n\n1.  Next, create an Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.\n\n1.  Install this project as a dependency with `npm install --save twitter-activity-eventsource-cdk`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n    ```typescript\n    import * as activity from 'twitter-activity-eventsource-cdk'\n\n    // Inside stack constructor:\n    const source = new activity.EventSource(this, 'ActivityEventSource')\n    ```\n\n1.  If this is the first time using CDK in your AWS account, run `npx cdk bootstrap` before deploying.\n\n1.  Finally, run `npx cdk deploy` and enjoy!\n\n## To Do\n\n* Write tests! :neutral_face:\n"
   },
   "repository": {
     "type": "git",
@@ -584,22 +584,11 @@
   "schema": "jsii/0.10.0",
   "targets": {
     "dotnet": {
-      "namespace": "get2know.cdk.TwitterActivityEventSource",
-      "packageId": "get2know.cdk.TwitterActivityEventSource"
-    },
-    "java": {
-      "maven": {
-        "artifactId": "twitter-activity-eventsource",
-        "groupId": "io.get2know.cdk"
-      },
-      "package": "io.get2know.cdk.TwitterActivityEventSource"
+      "namespace": "Get2Know.CDK.TwitterActivity",
+      "packageId": "Get2Know.CDK.TwitterActivity"
     },
     "js": {
       "npm": "twitter-activity-eventsource-cdk"
-    },
-    "python": {
-      "distName": "get2know.cdk.twitter-activity-eventsource",
-      "module": "get2know.cdk.twitter-activity-eventsource"
     }
   },
   "types": {
@@ -785,5 +774,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "wU1zTrQ1+jEiKABlnN9m8RQWkPC2mtD1jV43C6lGqLs="
+  "fingerprint": "axU1Gtff4EspuJquufFDORCtFl70xCjFyXUIfB2zS0w="
 }

@@ -1,7 +1,8 @@
 *.ts
 !*.d.ts
 
-/src/**
+src
+examples
 
 webpack.config.js
 tsconfig.json
