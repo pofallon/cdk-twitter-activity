@@ -14,7 +14,16 @@
 		"dbaeumer.vscode-eslint",
 		"ms-vscode.vscode-typescript-tslint-plugin",
 		"ms-dotnettools.csharp"
-	]
+	],
+
+	"remoteEnv": {
+		"NPM_TOKEN": "${localEnv:NPM_TOKEN}",
+		"NUGET_API_KEY": "${localEnv:NUGET_API_KEY}"
+	},
+
+	"mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/root/.aws,type=bind"
+]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
