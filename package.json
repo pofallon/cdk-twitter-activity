@@ -6,6 +6,7 @@
   "types": "lib/index.d.ts",
   "jsii": {
     "outdir": "dist",
+    "excludeTypescript": ["examples"],
     "targets": {
       "dotnet": {
         "namespace": "Get2Know.CDK.TwitterActivity",
