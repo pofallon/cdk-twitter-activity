@@ -1,7 +1,7 @@
-# twitter-activity-eventsource-cdk
+# twitter-activity-cdk
 [AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)
 
-For more detail, see the [wiki](https://github.com/pofallon/twitter-activity-eventsource-cdk/wiki)
+For more detail, see the [wiki](https://github.com/pofallon/twitter-activity-cdk/wiki)
 
 ## Usage
 
@@ -22,12 +22,12 @@ For more detail, see the [wiki](https://github.com/pofallon/twitter-activity-eve
 
 1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.
 
-1.  Install this project as a dependency with `npm install --save twitter-activity-eventsource-cdk`.
+1.  Install this project as a dependency with `npm install --save twitter-activity-cdk`.
 
 1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:
 
     ```typescript
-    import * as activity from 'twitter-activity-eventsource-cdk'
+    import * as activity from 'twitter-activity-cdk'
     
     // Inside stack constructor:
     const source = new activity.EventSource(this, 'ActivityEventSource')

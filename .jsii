@@ -565,7 +565,7 @@
     }
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
-  "homepage": "https://github.com/pofallon/twitter-activity-eventsource-cdk#readme",
+  "homepage": "https://github.com/pofallon/twitter-activity-cdk#readme",
   "jsiiVersion": "1.5.0 (build 46538f8)",
   "keywords": [
     "cdk",
@@ -573,13 +573,13 @@
     "eventbridge"
   ],
   "license": "MIT",
-  "name": "twitter-activity-eventsource-cdk",
+  "name": "twitter-activity-cdk",
   "readme": {
-    "markdown": "# twitter-activity-eventsource-cdk\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nFor more detail, see the [wiki](https://github.com/pofallon/twitter-activity-eventsource-cdk/wiki)\n\n## Usage\n\n### Storing Twitter credentials in AWS\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an App with Consumer API keys as well as an Access token and secret.\n\n1.  Next, create an Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n### Defining a stack in TypeScript\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.\n\n1.  Install this project as a dependency with `npm install --save twitter-activity-eventsource-cdk`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n    ```typescript\n    import * as activity from 'twitter-activity-eventsource-cdk'\n\n    // Inside stack constructor:\n    const source = new activity.EventSource(this, 'ActivityEventSource')\n    ```\n\n### Defining a stack in C#\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language csharp`.\n\n1.  Install this project as a dependency with `dotnet add package Get2Know.CDK.TwitterActivity`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n```csharp\npublic class ActivityExampleStack : Stack\n{\n    internal ActivityExampleStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)\n    {\n        new EventSource(this, \"ActivityEventSource\");\n    }\n}\n```\n\n### Deploying the stack\n\n1.  If this is the first time using CDK in your AWS account, run `npx cdk bootstrap` before deploying.\n\n1.  Finally, run `npx cdk deploy` and enjoy!\n\n## To Do\n\n* Write tests! :neutral_face:\n"
+    "markdown": "# twitter-activity-cdk\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nFor more detail, see the [wiki](https://github.com/pofallon/twitter-activity-cdk/wiki)\n\n## Usage\n\n### Storing Twitter credentials in AWS\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an App with Consumer API keys as well as an Access token and secret.\n\n1.  Next, create an Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n### Defining a stack in TypeScript\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language typescript`.\n\n1.  Install this project as a dependency with `npm install --save twitter-activity-cdk`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n    ```typescript\n    import * as activity from 'twitter-activity-cdk'\n\n    // Inside stack constructor:\n    const source = new activity.EventSource(this, 'ActivityEventSource')\n    ```\n\n### Defining a stack in C#\n\n1.  [Install node.js](https://nodejs.org/en/download/) and create a new CDK stack project with `npx cdk init app --language csharp`.\n\n1.  Install this project as a dependency with `dotnet add package Get2Know.CDK.TwitterActivity`.\n\n1.  Edit the main file for your stack, import this new dependency and create the resource in your stack constructor:\n\n```csharp\npublic class ActivityExampleStack : Stack\n{\n    internal ActivityExampleStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)\n    {\n        new EventSource(this, \"ActivityEventSource\");\n    }\n}\n```\n\n### Deploying the stack\n\n1.  If this is the first time using CDK in your AWS account, run `npx cdk bootstrap` before deploying.\n\n1.  Finally, run `npx cdk deploy` and enjoy!\n\n## To Do\n\n* Write tests! :neutral_face:\n"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pofallon/twitter-activity-eventsource-cdk.git"
+    "url": "git+https://github.com/pofallon/twitter-activity-cdk.git"
   },
   "schema": "jsii/0.10.0",
   "targets": {
@@ -588,14 +588,14 @@
       "packageId": "Get2Know.CDK.TwitterActivity"
     },
     "js": {
-      "npm": "twitter-activity-eventsource-cdk"
+      "npm": "twitter-activity-cdk"
     }
   },
   "types": {
-    "twitter-activity-eventsource-cdk.EventSource": {
-      "assembly": "twitter-activity-eventsource-cdk",
+    "twitter-activity-cdk.EventSource": {
+      "assembly": "twitter-activity-cdk",
       "base": "@aws-cdk/core.Construct",
-      "fqn": "twitter-activity-eventsource-cdk.EventSource",
+      "fqn": "twitter-activity-cdk.EventSource",
       "initializer": {
         "parameters": [
           {
@@ -631,10 +631,10 @@
         }
       ]
     },
-    "twitter-activity-eventsource-cdk.Subscription": {
-      "assembly": "twitter-activity-eventsource-cdk",
+    "twitter-activity-cdk.Subscription": {
+      "assembly": "twitter-activity-cdk",
       "base": "@aws-cdk/core.Construct",
-      "fqn": "twitter-activity-eventsource-cdk.Subscription",
+      "fqn": "twitter-activity-cdk.Subscription",
       "initializer": {
         "parameters": [
           {
@@ -652,7 +652,7 @@
           {
             "name": "props",
             "type": {
-              "fqn": "twitter-activity-eventsource-cdk.SubscriptionProps"
+              "fqn": "twitter-activity-cdk.SubscriptionProps"
             }
           }
         ]
@@ -664,10 +664,10 @@
       },
       "name": "Subscription"
     },
-    "twitter-activity-eventsource-cdk.SubscriptionProps": {
-      "assembly": "twitter-activity-eventsource-cdk",
+    "twitter-activity-cdk.SubscriptionProps": {
+      "assembly": "twitter-activity-cdk",
       "datatype": true,
-      "fqn": "twitter-activity-eventsource-cdk.SubscriptionProps",
+      "fqn": "twitter-activity-cdk.SubscriptionProps",
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/subscription.ts",
@@ -702,10 +702,10 @@
         }
       ]
     },
-    "twitter-activity-eventsource-cdk.Webhook": {
-      "assembly": "twitter-activity-eventsource-cdk",
+    "twitter-activity-cdk.Webhook": {
+      "assembly": "twitter-activity-cdk",
       "base": "@aws-cdk/core.Construct",
-      "fqn": "twitter-activity-eventsource-cdk.Webhook",
+      "fqn": "twitter-activity-cdk.Webhook",
       "initializer": {
         "parameters": [
           {
@@ -723,7 +723,7 @@
           {
             "name": "props",
             "type": {
-              "fqn": "twitter-activity-eventsource-cdk.WebhookProps"
+              "fqn": "twitter-activity-cdk.WebhookProps"
             }
           }
         ]
@@ -747,10 +747,10 @@
         }
       ]
     },
-    "twitter-activity-eventsource-cdk.WebhookProps": {
-      "assembly": "twitter-activity-eventsource-cdk",
+    "twitter-activity-cdk.WebhookProps": {
+      "assembly": "twitter-activity-cdk",
       "datatype": true,
-      "fqn": "twitter-activity-eventsource-cdk.WebhookProps",
+      "fqn": "twitter-activity-cdk.WebhookProps",
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/webhook.ts",
@@ -774,5 +774,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "VD2WvT1mdwa5j+ba/9NGcFGxcqIvHKxb/JrqzxBAfHc="
+  "fingerprint": "aTNIY7xjhfbxPI8gL8CxiX4LtYWAdcXcExHVkObKt64="
 }
