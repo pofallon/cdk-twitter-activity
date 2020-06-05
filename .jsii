@@ -7,12 +7,12 @@
     "url": "https://www.get2know.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.42.0",
-    "@aws-cdk/aws-cloudformation": "^1.42.0",
-    "@aws-cdk/aws-events": "^1.42.0",
-    "@aws-cdk/aws-lambda": "^1.42.0",
-    "@aws-cdk/core": "1.42.0",
-    "@aws-cdk/custom-resources": "^1.42.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.44.0",
+    "@aws-cdk/aws-cloudformation": "^1.44.0",
+    "@aws-cdk/aws-events": "^1.44.0",
+    "@aws-cdk/aws-lambda": "^1.44.0",
+    "@aws-cdk/core": "1.44.0",
+    "@aws-cdk/custom-resources": "^1.44.0",
     "constructs": "^3.0.3"
   },
   "dependencyClosure": {
@@ -566,7 +566,7 @@
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "homepage": "https://github.com/pofallon/twitter-activity-cdk#readme",
-  "jsiiVersion": "1.5.0 (build 46538f8)",
+  "jsiiVersion": "1.6.0 (build 248e75b)",
   "keywords": [
     "cdk",
     "twitter",
@@ -774,5 +774,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "aTNIY7xjhfbxPI8gL8CxiX4LtYWAdcXcExHVkObKt64="
+  "fingerprint": "twwVSRzHQMC7a0uztNVqoe4SUkwmw1wdaY7AeQynuB4="
 }

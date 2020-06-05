@@ -6,7 +6,9 @@
   "types": "lib/index.d.ts",
   "jsii": {
     "outdir": "dist",
-    "excludeTypescript": ["examples"],
+    "excludeTypescript": [
+      "examples"
+    ],
     "targets": {
       "dotnet": {
         "namespace": "Get2Know.CDK.TwitterActivity",
@@ -38,38 +40,38 @@
   },
   "homepage": "https://github.com/pofallon/twitter-activity-cdk#readme",
   "devDependencies": {
-    "@aws-cdk/assert": "1.42.0",
+    "@aws-cdk/assert": "1.44.0",
     "@types/jest": "^25.2.3",
-    "@types/node": "^14.0.5",
-    "aws-sdk": "^2.685.0",
+    "@types/node": "^14.0.11",
+    "aws-sdk": "^2.690.0",
     "ip-cidr": "^2.0.12",
     "jest": "^26.0.1",
-    "jsii": "^1.5.0",
-    "jsii-pacmak": "^1.5.0",
+    "jsii": "^1.6.0",
+    "jsii-pacmak": "^1.6.0",
     "jsii-release": "^0.1.5",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.0.0",
+    "ts-jest": "^26.1.0",
     "tslint": "^6.1.2",
     "twttr": "^1.0.0",
-    "typescript": "^3.9.3",
+    "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "1.42.0",
-    "@aws-cdk/aws-apigatewayv2": "^1.42.0",
-    "@aws-cdk/aws-cloudformation": "^1.42.0",
-    "@aws-cdk/aws-events": "^1.42.0",
-    "@aws-cdk/aws-lambda": "^1.42.0",
-    "@aws-cdk/custom-resources": "^1.42.0",
+    "@aws-cdk/core": "1.44.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.44.0",
+    "@aws-cdk/aws-cloudformation": "^1.44.0",
+    "@aws-cdk/aws-events": "^1.44.0",
+    "@aws-cdk/aws-lambda": "^1.44.0",
+    "@aws-cdk/custom-resources": "^1.44.0",
     "constructs": "^3.0.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.42.0",
-    "@aws-cdk/aws-cloudformation": "^1.42.0",
-    "@aws-cdk/aws-events": "^1.42.0",
-    "@aws-cdk/aws-lambda": "^1.42.0",
-    "@aws-cdk/core": "1.42.0",
-    "@aws-cdk/custom-resources": "^1.42.0"
+    "@aws-cdk/aws-apigatewayv2": "^1.44.0",
+    "@aws-cdk/aws-cloudformation": "^1.44.0",
+    "@aws-cdk/aws-events": "^1.44.0",
+    "@aws-cdk/aws-lambda": "^1.44.0",
+    "@aws-cdk/core": "1.44.0",
+    "@aws-cdk/custom-resources": "^1.44.0"
   }
 }
