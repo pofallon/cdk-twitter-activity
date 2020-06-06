@@ -5,7 +5,7 @@ For more detail, see the [wiki](https://github.com/pofallon/twitter-activity-cdk
 
 ## Getting Started
 
-1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an App with Consumer API keys as well as an Access token and secret.
+1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an app with consumer API keys as well as an access token and secret.
 
 1.  Create a Twitter Account Activity API sandbox for your application (the free tier is fine for this use case).
 
