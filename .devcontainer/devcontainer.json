@@ -17,6 +17,9 @@
 	],
 
 	"remoteEnv": {
+		"AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
+		"AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}",
+		"AWS_SESSION_TOKEN": "${localEnv:AWS_SESSION_TOKEN}",
 		"NPM_TOKEN": "${localEnv:NPM_TOKEN}",
 		"NUGET_API_KEY": "${localEnv:NUGET_API_KEY}"
 	},
