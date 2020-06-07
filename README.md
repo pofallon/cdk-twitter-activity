@@ -1,4 +1,7 @@
 # twitter-activity-cdk
+
+![CI Badge](https://github.com/pofallon/twitter-activity-cdk/workflows/CI/badge.svg)
+
 [AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)
 
 For more detail, see the [wiki](https://github.com/pofallon/twitter-activity-cdk/wiki)
