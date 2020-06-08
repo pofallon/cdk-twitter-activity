@@ -22,7 +22,7 @@
     "watch": "jsii -w",
     "package": "jsii-pacmak",
     "clean": "rimraf dist lambda-dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
