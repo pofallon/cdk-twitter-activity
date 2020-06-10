@@ -565,7 +565,7 @@
     }
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
-  "homepage": "https://github.com/pofallon/twitter-activity-cdk#readme",
+  "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
   "jsiiVersion": "1.6.0 (build 248e75b)",
   "keywords": [
     "cdk",
@@ -573,13 +573,13 @@
     "eventbridge"
   ],
   "license": "MIT",
-  "name": "twitter-activity-cdk",
+  "name": "cdk-twitter-activity",
   "readme": {
-    "markdown": "# twitter-activity-cdk\n\n![CI Badge](https://github.com/pofallon/twitter-activity-cdk/workflows/CI/badge.svg)\n\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nFor more detail, see the [wiki](https://github.com/pofallon/twitter-activity-cdk/wiki)\n\n## Getting Started\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an app with consumer API keys as well as an access token and secret.\n\n1.  Create a Twitter Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n## Usage\n\nSee the [examples](examples) directory for TypeScript and C# example stacks that use this construct.\n\n## To Do\n\n* Write tests! :neutral_face:\n"
+    "markdown": "# cdk-twitter-activity\n\n![CI Badge](https://github.com/pofallon/cdk-twitter-activity/workflows/CI/badge.svg)\n\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nFor more detail, see the [wiki](https://github.com/pofallon/cdk-twitter-activity/wiki)\n\n## Getting Started\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an app with consumer API keys as well as an access token and secret.\n\n1.  Create a Twitter Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n## Usage\n\nSee the [examples](examples) directory for TypeScript and C# example stacks that use this construct.\n\n## To Do\n\n* Write tests! :neutral_face:\n"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pofallon/twitter-activity-cdk.git"
+    "url": "git+https://github.com/pofallon/cdk-twitter-activity.git"
   },
   "schema": "jsii/0.10.0",
   "targets": {
@@ -588,14 +588,14 @@
       "packageId": "Get2Know.CDK.TwitterActivity"
     },
     "js": {
-      "npm": "twitter-activity-cdk"
+      "npm": "cdk-twitter-activity"
     }
   },
   "types": {
-    "twitter-activity-cdk.EventSource": {
-      "assembly": "twitter-activity-cdk",
+    "cdk-twitter-activity.EventSource": {
+      "assembly": "cdk-twitter-activity",
       "base": "@aws-cdk/core.Construct",
-      "fqn": "twitter-activity-cdk.EventSource",
+      "fqn": "cdk-twitter-activity.EventSource",
       "initializer": {
         "parameters": [
           {
@@ -631,10 +631,10 @@
         }
       ]
     },
-    "twitter-activity-cdk.Subscription": {
-      "assembly": "twitter-activity-cdk",
+    "cdk-twitter-activity.Subscription": {
+      "assembly": "cdk-twitter-activity",
       "base": "@aws-cdk/core.Construct",
-      "fqn": "twitter-activity-cdk.Subscription",
+      "fqn": "cdk-twitter-activity.Subscription",
       "initializer": {
         "parameters": [
           {
@@ -652,7 +652,7 @@
           {
             "name": "props",
             "type": {
-              "fqn": "twitter-activity-cdk.SubscriptionProps"
+              "fqn": "cdk-twitter-activity.SubscriptionProps"
             }
           }
         ]
@@ -664,10 +664,10 @@
       },
       "name": "Subscription"
     },
-    "twitter-activity-cdk.SubscriptionProps": {
-      "assembly": "twitter-activity-cdk",
+    "cdk-twitter-activity.SubscriptionProps": {
+      "assembly": "cdk-twitter-activity",
       "datatype": true,
-      "fqn": "twitter-activity-cdk.SubscriptionProps",
+      "fqn": "cdk-twitter-activity.SubscriptionProps",
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/subscription.ts",
@@ -702,10 +702,10 @@
         }
       ]
     },
-    "twitter-activity-cdk.Webhook": {
-      "assembly": "twitter-activity-cdk",
+    "cdk-twitter-activity.Webhook": {
+      "assembly": "cdk-twitter-activity",
       "base": "@aws-cdk/core.Construct",
-      "fqn": "twitter-activity-cdk.Webhook",
+      "fqn": "cdk-twitter-activity.Webhook",
       "initializer": {
         "parameters": [
           {
@@ -723,7 +723,7 @@
           {
             "name": "props",
             "type": {
-              "fqn": "twitter-activity-cdk.WebhookProps"
+              "fqn": "cdk-twitter-activity.WebhookProps"
             }
           }
         ]
@@ -747,10 +747,10 @@
         }
       ]
     },
-    "twitter-activity-cdk.WebhookProps": {
-      "assembly": "twitter-activity-cdk",
+    "cdk-twitter-activity.WebhookProps": {
+      "assembly": "cdk-twitter-activity",
       "datatype": true,
-      "fqn": "twitter-activity-cdk.WebhookProps",
+      "fqn": "cdk-twitter-activity.WebhookProps",
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/webhook.ts",
@@ -774,5 +774,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "sQEtlvCwPQx/swcJAaHob9YoRqAo0BDz12Kz+jCH5gg="
+  "fingerprint": "2TxN1myID/YscWpWs8f/C7ctgLgWnLd7aWV+q0g4OO8="
 }
