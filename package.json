@@ -41,38 +41,38 @@
   },
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
   "devDependencies": {
-    "@aws-cdk/assert": "1.45.0",
+    "@aws-cdk/assert": "1.46.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
-    "aws-sdk": "^2.693.0",
-    "ip-cidr": "^2.0.12",
+    "aws-sdk": "^2.701.0",
+    "ip-cidr": "^2.0.13",
     "jest": "^26.0.1",
-    "jsii": "^1.6.0",
-    "jsii-pacmak": "^1.6.0",
-    "jsii-release": "^0.1.5",
+    "jsii": "^1.7.0",
+    "jsii-pacmak": "^1.7.0",
+    "jsii-release": "^0.1.6",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.1.0",
     "tslint": "^6.1.2",
     "twttr": "^1.0.0",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "1.45.0",
-    "@aws-cdk/aws-apigatewayv2": "^1.45.0",
-    "@aws-cdk/aws-cloudformation": "^1.45.0",
-    "@aws-cdk/aws-events": "^1.45.0",
-    "@aws-cdk/aws-lambda": "^1.45.0",
-    "@aws-cdk/custom-resources": "^1.45.0",
+    "@aws-cdk/core": "1.46.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.46.0",
+    "@aws-cdk/aws-cloudformation": "^1.46.0",
+    "@aws-cdk/aws-events": "^1.46.0",
+    "@aws-cdk/aws-lambda": "^1.46.0",
+    "@aws-cdk/custom-resources": "^1.46.0",
     "constructs": "^3.0.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.45.0",
-    "@aws-cdk/aws-cloudformation": "^1.45.0",
-    "@aws-cdk/aws-events": "^1.45.0",
-    "@aws-cdk/aws-lambda": "^1.45.0",
-    "@aws-cdk/core": "1.45.0",
-    "@aws-cdk/custom-resources": "^1.45.0"
+    "@aws-cdk/aws-apigatewayv2": "^1.46.0",
+    "@aws-cdk/aws-cloudformation": "^1.46.0",
+    "@aws-cdk/aws-events": "^1.46.0",
+    "@aws-cdk/aws-lambda": "^1.46.0",
+    "@aws-cdk/core": "1.46.0",
+    "@aws-cdk/custom-resources": "^1.46.0"
   }
 }
