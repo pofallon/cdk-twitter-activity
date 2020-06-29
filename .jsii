@@ -7,13 +7,13 @@
     "url": "https://www.get2know.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.46.0",
-    "@aws-cdk/aws-cloudformation": "^1.46.0",
-    "@aws-cdk/aws-events": "^1.46.0",
-    "@aws-cdk/aws-lambda": "^1.46.0",
-    "@aws-cdk/core": "1.46.0",
-    "@aws-cdk/custom-resources": "^1.46.0",
-    "constructs": "^3.0.3"
+    "@aws-cdk/aws-apigatewayv2": "^1.47.0",
+    "@aws-cdk/aws-cloudformation": "^1.47.0",
+    "@aws-cdk/aws-events": "^1.47.0",
+    "@aws-cdk/aws-lambda": "^1.47.0",
+    "@aws-cdk/core": "1.47.0",
+    "@aws-cdk/custom-resources": "^1.47.0",
+    "constructs": "^3.0.4"
   },
   "dependencyClosure": {
     "@aws-cdk/assets": {
@@ -391,31 +391,6 @@
         }
       }
     },
-    "@aws-cdk/cdk-assets-schema": {
-      "targets": {
-        "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
-          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
-          "namespace": "Amazon.CDK.CdkAssets.Schema",
-          "packageId": "Amazon.CDK.CdkAssets.Schema",
-          "signAssembly": true
-        },
-        "java": {
-          "maven": {
-            "artifactId": "cdk-assets-schema",
-            "groupId": "software.amazon.awscdk"
-          },
-          "package": "software.amazon.awscdk.cdkassets.schema"
-        },
-        "js": {
-          "npm": "@aws-cdk/cdk-assets-schema"
-        },
-        "python": {
-          "distName": "aws-cdk.cdk-assets-schema",
-          "module": "aws_cdk.cdk_assets_schema"
-        }
-      }
-    },
     "@aws-cdk/cloud-assembly-schema": {
       "targets": {
         "dotnet": {
@@ -774,5 +749,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "/ZlYdV4dC2ilmLhd7swo8tCh+aE70rBJx19IDZ54JmY="
+  "fingerprint": "b1XnD8aiIrTYT19SB4+HZxgZSQZaCFQLPIDLKT6V3dE="
 }
