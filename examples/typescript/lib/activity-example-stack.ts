@@ -5,7 +5,7 @@ export class ActivityExampleStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const source = new activity.EventSource(this, 'ActivityExampleStack')
+    const source = new activity.EventSource(this, 'ActivityEventSource')
 
   }
 }
