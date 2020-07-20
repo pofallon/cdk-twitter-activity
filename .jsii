@@ -7,12 +7,12 @@
     "url": "https://www.get2know.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.47.0",
-    "@aws-cdk/aws-cloudformation": "^1.47.0",
-    "@aws-cdk/aws-events": "^1.47.0",
-    "@aws-cdk/aws-lambda": "^1.47.0",
-    "@aws-cdk/core": "1.47.0",
-    "@aws-cdk/custom-resources": "^1.47.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.52.0",
+    "@aws-cdk/aws-cloudformation": "^1.52.0",
+    "@aws-cdk/aws-events": "^1.52.0",
+    "@aws-cdk/aws-lambda": "^1.52.0",
+    "@aws-cdk/core": "1.52.0",
+    "@aws-cdk/custom-resources": "^1.52.0",
     "constructs": "^3.0.4"
   },
   "dependencyClosure": {
@@ -66,6 +66,31 @@
         }
       }
     },
+    "@aws-cdk/aws-certificatemanager": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.CertificateManager",
+          "packageId": "Amazon.CDK.AWS.CertificateManager",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "certificatemanager",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.certificatemanager"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-certificatemanager"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-certificatemanager",
+          "module": "aws_cdk.aws_certificatemanager"
+        }
+      }
+    },
     "@aws-cdk/aws-cloudformation": {
       "targets": {
         "dotnet": {
@@ -116,6 +141,31 @@
         }
       }
     },
+    "@aws-cdk/aws-codeguruprofiler": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.CodeGuruProfiler",
+          "packageId": "Amazon.CDK.AWS.CodeGuruProfiler",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "codeguruprofiler",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.codeguruprofiler"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-codeguruprofiler"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-codeguruprofiler",
+          "module": "aws_cdk.aws_codeguruprofiler"
+        }
+      }
+    },
     "@aws-cdk/aws-ec2": {
       "targets": {
         "dotnet": {
@@ -138,6 +188,31 @@
         "python": {
           "distName": "aws-cdk.aws-ec2",
           "module": "aws_cdk.aws_ec2"
+        }
+      }
+    },
+    "@aws-cdk/aws-efs": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.EFS",
+          "packageId": "Amazon.CDK.AWS.EFS",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "efs",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.efs"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-efs"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-efs",
+          "module": "aws_cdk.aws_efs"
         }
       }
     },
@@ -263,6 +338,31 @@
         "python": {
           "distName": "aws-cdk.aws-logs",
           "module": "aws_cdk.aws_logs"
+        }
+      }
+    },
+    "@aws-cdk/aws-route53": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Route53",
+          "packageId": "Amazon.CDK.AWS.Route53",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "route53",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.route53"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-route53"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-route53",
+          "module": "aws_cdk.aws_route53"
         }
       }
     },
@@ -541,7 +641,7 @@
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
-  "jsiiVersion": "1.7.0 (build 179a3a5)",
+  "jsiiVersion": "1.9.0 (build 5c646d5)",
   "keywords": [
     "cdk",
     "twitter",
@@ -635,7 +735,7 @@
       "kind": "class",
       "locationInModule": {
         "filename": "lib/subscription.ts",
-        "line": 13
+        "line": 14
       },
       "name": "Subscription"
     },
@@ -646,7 +746,7 @@
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/subscription.ts",
-        "line": 8
+        "line": 9
       },
       "name": "SubscriptionProps",
       "properties": [
@@ -655,7 +755,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/subscription.ts",
-            "line": 9
+            "line": 10
           },
           "name": "webhookUrl",
           "type": {
@@ -667,7 +767,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/subscription.ts",
-            "line": 10
+            "line": 11
           },
           "name": "environmentName",
           "optional": true,
@@ -749,5 +849,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "b1XnD8aiIrTYT19SB4+HZxgZSQZaCFQLPIDLKT6V3dE="
+  "fingerprint": "C8JHh7PByXeZ5RI+zug+HPpxehWXnXeG//22GBumQI0="
 }
