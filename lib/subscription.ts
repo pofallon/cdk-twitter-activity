@@ -1,6 +1,7 @@
 import * as cr from '@aws-cdk/custom-resources'
 import * as cfn  from '@aws-cdk/aws-cloudformation'
 import * as lambda from '@aws-cdk/aws-lambda'
+import * as logs from '@aws-cdk/aws-logs'
 import * as ssm from '@aws-cdk/aws-ssm'
 import * as cdk from '@aws-cdk/core'
 import * as path from 'path'
@@ -18,7 +19,7 @@ export class Subscription extends cdk.Construct {
     const webhookUrl = props.webhookUrl
 
     const onEvent = new lambda.Function(this, 'SubscriptionLambda', {
-      logRetention: 7,
+      logRetention: logs.RetentionDays.ONE_WEEK,
       runtime: lambda.Runtime.NODEJS_12_X,
       timeout: cdk.Duration.seconds(60),
       environment: {
@@ -34,7 +35,8 @@ export class Subscription extends cdk.Construct {
     }).grantRead(onEvent.role!)
 
     const provider = new cr.Provider(this, 'SubscriptionProvider', {
-      onEventHandler: onEvent
+      onEventHandler: onEvent,
+      logRetention: logs.RetentionDays.ONE_DAY
     })
 
     // tslint:disable-next-line:no-unused-expression
