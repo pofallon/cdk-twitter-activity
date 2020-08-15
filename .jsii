@@ -7,12 +7,12 @@
     "url": "https://www.get2know.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.54.0",
-    "@aws-cdk/aws-cloudformation": "^1.54.0",
-    "@aws-cdk/aws-events": "^1.54.0",
-    "@aws-cdk/aws-lambda": "^1.54.0",
-    "@aws-cdk/core": "1.54.0",
-    "@aws-cdk/custom-resources": "^1.54.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.57.0",
+    "@aws-cdk/aws-cloudformation": "^1.57.0",
+    "@aws-cdk/aws-events": "^1.57.0",
+    "@aws-cdk/aws-lambda": "^1.57.0",
+    "@aws-cdk/core": "1.57.0",
+    "@aws-cdk/custom-resources": "^1.57.0",
     "constructs": "^3.0.4"
   },
   "dependencyClosure": {
@@ -641,7 +641,7 @@
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
-  "jsiiVersion": "1.9.0 (build 5c646d5)",
+  "jsiiVersion": "1.10.0 (build 27cfbed)",
   "keywords": [
     "cdk",
     "twitter",
@@ -672,6 +672,10 @@
       "base": "@aws-cdk/core.Construct",
       "fqn": "cdk-twitter-activity.EventSource",
       "initializer": {
+        "locationInModule": {
+          "filename": "lib/eventsource.ts",
+          "line": 10
+        },
         "parameters": [
           {
             "name": "scope",
@@ -711,6 +715,10 @@
       "base": "@aws-cdk/core.Construct",
       "fqn": "cdk-twitter-activity.Subscription",
       "initializer": {
+        "locationInModule": {
+          "filename": "lib/subscription.ts",
+          "line": 16
+        },
         "parameters": [
           {
             "name": "scope",
@@ -782,6 +790,10 @@
       "base": "@aws-cdk/core.Construct",
       "fqn": "cdk-twitter-activity.Webhook",
       "initializer": {
+        "locationInModule": {
+          "filename": "lib/webhook.ts",
+          "line": 16
+        },
         "parameters": [
           {
             "name": "scope",
@@ -849,5 +861,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "J1sPw/2RwPlUK+Wb3/LdhbHlpPjx6lxUCC/Tzy4vwM8="
+  "fingerprint": "mswtuDlMXy2avDbPDmjiY9hIC70R8o15E2IrktYoq1A="
 }
