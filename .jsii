@@ -7,12 +7,12 @@
     "url": "https://www.get2know.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.57.0",
-    "@aws-cdk/aws-cloudformation": "^1.57.0",
-    "@aws-cdk/aws-events": "^1.57.0",
-    "@aws-cdk/aws-lambda": "^1.57.0",
-    "@aws-cdk/core": "1.57.0",
-    "@aws-cdk/custom-resources": "^1.57.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.59.0",
+    "@aws-cdk/aws-cloudformation": "^1.59.0",
+    "@aws-cdk/aws-events": "^1.59.0",
+    "@aws-cdk/aws-lambda": "^1.59.0",
+    "@aws-cdk/core": "1.59.0",
+    "@aws-cdk/custom-resources": "^1.59.0",
     "constructs": "^3.0.4"
   },
   "dependencyClosure": {
@@ -63,6 +63,56 @@
         "python": {
           "distName": "aws-cdk.aws-apigatewayv2",
           "module": "aws_cdk.aws_apigatewayv2"
+        }
+      }
+    },
+    "@aws-cdk/aws-applicationautoscaling": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.ApplicationAutoScaling",
+          "packageId": "Amazon.CDK.AWS.ApplicationAutoScaling",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "applicationautoscaling",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.applicationautoscaling"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-applicationautoscaling"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-applicationautoscaling",
+          "module": "aws_cdk.aws_applicationautoscaling"
+        }
+      }
+    },
+    "@aws-cdk/aws-autoscaling-common": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.AutoScaling.Common",
+          "packageId": "Amazon.CDK.AWS.AutoScaling.Common",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "autoscaling-common",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.autoscaling.common"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-autoscaling-common"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-autoscaling-common",
+          "module": "aws_cdk.aws_autoscaling_common"
         }
       }
     },
@@ -861,5 +911,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "mswtuDlMXy2avDbPDmjiY9hIC70R8o15E2IrktYoq1A="
+  "fingerprint": "814D1sP38+slbegxkuqPIHxtgwdYX7nmmKGOosTe1/4="
 }
