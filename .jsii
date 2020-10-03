@@ -7,12 +7,12 @@
     "url": "https://www.get2know.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.61.1",
-    "@aws-cdk/aws-cloudformation": "^1.61.1",
-    "@aws-cdk/aws-events": "^1.61.1",
-    "@aws-cdk/aws-lambda": "^1.61.1",
-    "@aws-cdk/core": "1.61.1",
-    "@aws-cdk/custom-resources": "^1.61.1",
+    "@aws-cdk/aws-apigatewayv2": "^1.66.0",
+    "@aws-cdk/aws-cloudformation": "^1.66.0",
+    "@aws-cdk/aws-events": "^1.66.0",
+    "@aws-cdk/aws-lambda": "^1.66.0",
+    "@aws-cdk/core": "1.66.0",
+    "@aws-cdk/custom-resources": "^1.66.0",
     "constructs": "^3.0.4"
   },
   "dependencyClosure": {
@@ -36,6 +36,10 @@
           "npm": "@aws-cdk/assets"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.assets",
           "module": "aws_cdk.assets"
         }
@@ -61,6 +65,10 @@
           "npm": "@aws-cdk/aws-apigatewayv2"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-apigatewayv2",
           "module": "aws_cdk.aws_apigatewayv2"
         }
@@ -86,6 +94,10 @@
           "npm": "@aws-cdk/aws-applicationautoscaling"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-applicationautoscaling",
           "module": "aws_cdk.aws_applicationautoscaling"
         }
@@ -111,6 +123,10 @@
           "npm": "@aws-cdk/aws-autoscaling-common"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-autoscaling-common",
           "module": "aws_cdk.aws_autoscaling_common"
         }
@@ -136,6 +152,10 @@
           "npm": "@aws-cdk/aws-certificatemanager"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-certificatemanager",
           "module": "aws_cdk.aws_certificatemanager"
         }
@@ -161,6 +181,10 @@
           "npm": "@aws-cdk/aws-cloudformation"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-cloudformation",
           "module": "aws_cdk.aws_cloudformation"
         }
@@ -186,6 +210,10 @@
           "npm": "@aws-cdk/aws-cloudwatch"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-cloudwatch",
           "module": "aws_cdk.aws_cloudwatch"
         }
@@ -211,6 +239,10 @@
           "npm": "@aws-cdk/aws-codeguruprofiler"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-codeguruprofiler",
           "module": "aws_cdk.aws_codeguruprofiler"
         }
@@ -236,6 +268,10 @@
           "npm": "@aws-cdk/aws-ec2"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-ec2",
           "module": "aws_cdk.aws_ec2"
         }
@@ -261,6 +297,10 @@
           "npm": "@aws-cdk/aws-efs"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-efs",
           "module": "aws_cdk.aws_efs"
         }
@@ -286,6 +326,10 @@
           "npm": "@aws-cdk/aws-events"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-events",
           "module": "aws_cdk.aws_events"
         }
@@ -311,6 +355,10 @@
           "npm": "@aws-cdk/aws-iam"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-iam",
           "module": "aws_cdk.aws_iam"
         }
@@ -336,6 +384,10 @@
           "npm": "@aws-cdk/aws-kms"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-kms",
           "module": "aws_cdk.aws_kms"
         }
@@ -361,6 +413,10 @@
           "npm": "@aws-cdk/aws-lambda"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-lambda",
           "module": "aws_cdk.aws_lambda"
         }
@@ -386,6 +442,10 @@
           "npm": "@aws-cdk/aws-logs"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-logs",
           "module": "aws_cdk.aws_logs"
         }
@@ -411,6 +471,10 @@
           "npm": "@aws-cdk/aws-route53"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-route53",
           "module": "aws_cdk.aws_route53"
         }
@@ -436,6 +500,10 @@
           "npm": "@aws-cdk/aws-s3"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-s3",
           "module": "aws_cdk.aws_s3"
         }
@@ -461,6 +529,10 @@
           "npm": "@aws-cdk/aws-s3-assets"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-s3-assets",
           "module": "aws_cdk.aws_s3_assets"
         }
@@ -486,6 +558,10 @@
           "npm": "@aws-cdk/aws-sns"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-sns",
           "module": "aws_cdk.aws_sns"
         }
@@ -511,6 +587,10 @@
           "npm": "@aws-cdk/aws-sqs"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-sqs",
           "module": "aws_cdk.aws_sqs"
         }
@@ -536,6 +616,10 @@
           "npm": "@aws-cdk/aws-ssm"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.aws-ssm",
           "module": "aws_cdk.aws_ssm"
         }
@@ -561,6 +645,10 @@
           "npm": "@aws-cdk/cloud-assembly-schema"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.cloud-assembly-schema",
           "module": "aws_cdk.cloud_assembly_schema"
         }
@@ -586,6 +674,10 @@
           "npm": "@aws-cdk/core"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.core",
           "module": "aws_cdk.core"
         }
@@ -611,6 +703,10 @@
           "npm": "@aws-cdk/custom-resources"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.custom-resources",
           "module": "aws_cdk.custom_resources"
         }
@@ -636,6 +732,10 @@
           "npm": "@aws-cdk/cx-api"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.cx-api",
           "module": "aws_cdk.cx_api"
         }
@@ -661,6 +761,10 @@
           "npm": "@aws-cdk/region-info"
         },
         "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
           "distName": "aws-cdk.region-info",
           "module": "aws_cdk.region_info"
         }
@@ -691,7 +795,7 @@
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
-  "jsiiVersion": "1.12.0 (build 5ddc9f2)",
+  "jsiiVersion": "1.13.0 (build 385c325)",
   "keywords": [
     "cdk",
     "twitter",
@@ -911,5 +1015,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "jksZZxOGk8JaLRnSqElx4CqeshKzsspuXWzSkFoZiSM="
+  "fingerprint": "f7egklSkjj/qdbT8Ujuiu1J+dPYlD3AhwNS4wfWWKZQ="
 }
