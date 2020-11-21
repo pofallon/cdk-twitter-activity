@@ -6,4 +6,4 @@ import { TwitterActivityStack } from '../lib/twitter-activity-stack'
 const app = new cdk.App()
 
 // tslint:disable-next-line: no-unused-expression
-new TwitterActivityStack(app, 'TwitterActivityStack')
+new TwitterActivityStack(app, 'TwitterActivity')

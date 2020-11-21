@@ -1,10 +1,9 @@
 import * as cr from '@aws-cdk/custom-resources'
 import * as cfn  from '@aws-cdk/aws-cloudformation'
-import * as lambda from '@aws-cdk/aws-lambda'
+import * as lambda from '@aws-cdk/aws-lambda-nodejs'
 import * as logs from '@aws-cdk/aws-logs'
 import * as ssm from '@aws-cdk/aws-ssm'
 import * as cdk from '@aws-cdk/core'
-import * as path from 'path'
 
 export interface SubscriptionProps {
   readonly webhookUrl: string,
@@ -18,15 +17,12 @@ export class Subscription extends cdk.Construct {
 
     const webhookUrl = props.webhookUrl
 
-    const onEvent = new lambda.Function(this, 'SubscriptionLambda', {
-      logRetention: logs.RetentionDays.ONE_WEEK,
-      runtime: lambda.Runtime.NODEJS_12_X,
-      timeout: cdk.Duration.seconds(60),
+    const onEvent = new lambda.NodejsFunction(this, 'lambda', {
       environment: {
         'ENVIRONMENT_NAME': props.environmentName || 'test'
       },
-      handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../lambda-dist/subscription-lambda'))
+      logRetention: logs.RetentionDays.ONE_WEEK,
+      timeout: cdk.Duration.seconds(60)
     })
 
     ssm.StringParameter.fromSecureStringParameterAttributes(this, 'CredentialParameters', {

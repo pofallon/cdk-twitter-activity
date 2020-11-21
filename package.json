@@ -18,11 +18,10 @@
     }
   },
   "scripts": {
-    "prebuild": "webpack",
     "build": "jsii",
     "watch": "jsii -w",
     "package": "jsii-pacmak",
-    "clean": "rimraf dist lambda-dist",
+    "clean": "rimraf dist lib/*.js lib/*.d.ts tsconfig.json .parcel-cache",
     "test": "jest"
   },
   "repository": {
@@ -41,38 +40,58 @@
   },
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
   "devDependencies": {
-    "@aws-cdk/assert": "1.66.0",
-    "@types/jest": "^26.0.14",
-    "@types/node": "^14.11.2",
-    "aws-sdk": "^2.766.0",
-    "ip-cidr": "^2.1.0",
-    "jest": "^26.4.2",
-    "jsii": "^1.13.0",
-    "jsii-pacmak": "^1.13.0",
-    "jsii-release": "^0.1.10",
+    "@aws-cdk/assert": "1.73.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.7",
+    "aws-sdk": "^2.792.0",
+    "jest": "^26.6.3",
+    "jsii": "^1.14.1",
+    "jsii-pacmak": "^1.14.1",
+    "jsii-release": "^0.2.3",
+    "parcel": "2.0.0-beta.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.4.1",
+    "ts-jest": "^26.4.4",
     "tslint": "^6.1.3",
-    "twttr": "^2.0.1",
-    "typescript": "^4.0.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "1.66.0",
-    "@aws-cdk/aws-apigatewayv2": "^1.66.0",
-    "@aws-cdk/aws-cloudformation": "^1.66.0",
-    "@aws-cdk/aws-events": "^1.66.0",
-    "@aws-cdk/aws-lambda": "^1.66.0",
-    "@aws-cdk/custom-resources": "^1.66.0",
-    "constructs": "^3.0.4"
+    "@aws-cdk/core": "1.73.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.73.0",
+    "@aws-cdk/aws-cloudformation": "^1.73.0",
+    "@aws-cdk/aws-events": "^1.73.0",
+    "@aws-cdk/aws-lambda": "^1.73.0",
+    "@aws-cdk/custom-resources": "^1.73.0",
+    "constructs": "^3.2.27",
+    "@aws-cdk/aws-lambda-nodejs": "^1.73.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.73.0"
   },
+  "bundleDependencies": [
+    "range_check",
+    "twttr"
+  ],
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.66.0",
-    "@aws-cdk/aws-cloudformation": "^1.66.0",
-    "@aws-cdk/aws-events": "^1.66.0",
-    "@aws-cdk/aws-lambda": "^1.66.0",
-    "@aws-cdk/custom-resources": "^1.66.0",
-    "@aws-cdk/core": "1.66.0"
+    "@aws-cdk/aws-apigatewayv2": "^1.73.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.73.0",
+    "@aws-cdk/aws-cloudformation": "^1.73.0",
+    "@aws-cdk/aws-events": "^1.73.0",
+    "@aws-cdk/aws-lambda": "^1.73.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.73.0",
+    "@aws-cdk/core": "1.73.0",
+    "@aws-cdk/custom-resources": "^1.73.0",
+    "range_check": "^2.0.3",
+    "twttr": "^2.0.1"
+  },
+  "targets": {
+    "cdk-lambda": {
+      "context": "node",
+      "includeNodeModules": {
+        "aws-sdk": false
+      },
+      "sourceMap": false,
+      "minify": false,
+      "engines": {
+        "node": ">= 12"
+      }
+    }
   }
 }

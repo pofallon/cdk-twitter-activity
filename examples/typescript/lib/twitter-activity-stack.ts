@@ -7,7 +7,7 @@ export class TwitterActivityStack extends cdk.Stack {
     super(scope, id, props)
 
     const eventSource = new activity.EventSource(this, 'ActivityEventSource')
-    
+
     // Share the ARN of this EventBus so other stacks can leverage it
     // tslint:disable-next-line: no-unused-expression
     new cdk.CfnOutput(this, 'EventBusOutput', {

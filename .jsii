@@ -6,14 +6,20 @@
     ],
     "url": "https://www.get2know.io"
   },
+  "bundled": {
+    "range_check": "^2.0.3",
+    "twttr": "^2.0.1"
+  },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.66.0",
-    "@aws-cdk/aws-cloudformation": "^1.66.0",
-    "@aws-cdk/aws-events": "^1.66.0",
-    "@aws-cdk/aws-lambda": "^1.66.0",
-    "@aws-cdk/core": "1.66.0",
-    "@aws-cdk/custom-resources": "^1.66.0",
-    "constructs": "^3.0.4"
+    "@aws-cdk/aws-apigatewayv2": "^1.73.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.73.0",
+    "@aws-cdk/aws-cloudformation": "^1.73.0",
+    "@aws-cdk/aws-events": "^1.73.0",
+    "@aws-cdk/aws-lambda": "^1.73.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.73.0",
+    "@aws-cdk/core": "1.73.0",
+    "@aws-cdk/custom-resources": "^1.73.0",
+    "constructs": "^3.2.27"
   },
   "dependencyClosure": {
     "@aws-cdk/assets": {
@@ -71,6 +77,35 @@
           ],
           "distName": "aws-cdk.aws-apigatewayv2",
           "module": "aws_cdk.aws_apigatewayv2"
+        }
+      }
+    },
+    "@aws-cdk/aws-apigatewayv2-integrations": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.APIGatewayv2.Integrations",
+          "packageId": "Amazon.CDK.AWS.APIGatewayv2.Integrations",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "apigatewayv2-integrations",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.apigatewayv2.integrations"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-apigatewayv2-integrations"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-apigatewayv2-integrations",
+          "module": "aws_cdk.aws_apigatewayv2_integrations"
         }
       }
     },
@@ -306,6 +341,35 @@
         }
       }
     },
+    "@aws-cdk/aws-elasticloadbalancingv2": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.ElasticLoadBalancingV2",
+          "packageId": "Amazon.CDK.AWS.ElasticLoadBalancingV2",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "elasticloadbalancingv2",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.elasticloadbalancingv2"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-elasticloadbalancingv2"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-elasticloadbalancingv2",
+          "module": "aws_cdk.aws_elasticloadbalancingv2"
+        }
+      }
+    },
     "@aws-cdk/aws-events": {
       "targets": {
         "dotnet": {
@@ -422,6 +486,35 @@
         }
       }
     },
+    "@aws-cdk/aws-lambda-nodejs": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Lambda.Nodejs",
+          "packageId": "Amazon.CDK.AWS.Lambda.Nodejs",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "lambda-nodejs",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.lambda.nodejs"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-lambda-nodejs"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-lambda-nodejs",
+          "module": "aws_cdk.aws_lambda_nodejs"
+        }
+      }
+    },
     "@aws-cdk/aws-logs": {
       "targets": {
         "dotnet": {
@@ -535,6 +628,35 @@
           ],
           "distName": "aws-cdk.aws-s3-assets",
           "module": "aws_cdk.aws_s3_assets"
+        }
+      }
+    },
+    "@aws-cdk/aws-servicediscovery": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.ServiceDiscovery",
+          "packageId": "Amazon.CDK.AWS.ServiceDiscovery",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "servicediscovery",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.servicediscovery"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-servicediscovery"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-servicediscovery",
+          "module": "aws_cdk.aws_servicediscovery"
         }
       }
     },
@@ -795,13 +917,20 @@
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
-  "jsiiVersion": "1.13.0 (build 385c325)",
+  "jsiiVersion": "1.14.1 (build 828de8a)",
   "keywords": [
     "cdk",
     "twitter",
     "eventbridge"
   ],
   "license": "MIT",
+  "metadata": {
+    "jsii": {
+      "pacmak": {
+        "hasDefaultInterfaces": true
+      }
+    }
+  },
   "name": "cdk-twitter-activity",
   "readme": {
     "markdown": "# cdk-twitter-activity\n\n![CI Badge](https://github.com/pofallon/cdk-twitter-activity/workflows/CI/badge.svg)\n\n[AWS CDK](https://aws.amazon.com/cdk/) construct to publish [Twitter activity](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview) to [AWS EventBridge](https://aws.amazon.com/eventbridge/)\n\nFor more detail, see the [wiki](https://github.com/pofallon/cdk-twitter-activity/wiki)\n\n## Getting Started\n\n1.  Visit the [Twitter Developer site](https://developer.twitter.com) and create an app with consumer API keys as well as an access token and secret.\n\n1.  Create a Twitter Account Activity API sandbox for your application (the free tier is fine for this use case).\n\n1.  Store this App's credentials as SecureStrings in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) under the following names:\n\n    * `/twitter/consumer_api_key`\n    * `/twitter/consumer_api_secret_key`\n    * `/twitter/access_token`\n    * `/twitter/access_token_secret`\n\n## Usage\n\nSee the [examples](examples) directory for TypeScript and C# example stacks that use this construct.\n\n## To Do\n\n* Write tests! :neutral_face:\n"
@@ -871,7 +1000,7 @@
       "initializer": {
         "locationInModule": {
           "filename": "lib/subscription.ts",
-          "line": 16
+          "line": 15
         },
         "parameters": [
           {
@@ -897,7 +1026,7 @@
       "kind": "class",
       "locationInModule": {
         "filename": "lib/subscription.ts",
-        "line": 14
+        "line": 13
       },
       "name": "Subscription"
     },
@@ -908,7 +1037,7 @@
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/subscription.ts",
-        "line": 9
+        "line": 8
       },
       "name": "SubscriptionProps",
       "properties": [
@@ -917,7 +1046,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/subscription.ts",
-            "line": 10
+            "line": 9
           },
           "name": "webhookUrl",
           "type": {
@@ -929,7 +1058,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/subscription.ts",
-            "line": 11
+            "line": 10
           },
           "name": "environmentName",
           "optional": true,
@@ -946,7 +1075,7 @@
       "initializer": {
         "locationInModule": {
           "filename": "lib/webhook.ts",
-          "line": 16
+          "line": 17
         },
         "parameters": [
           {
@@ -972,14 +1101,14 @@
       "kind": "class",
       "locationInModule": {
         "filename": "lib/webhook.ts",
-        "line": 12
+        "line": 13
       },
       "name": "Webhook",
       "properties": [
         {
           "locationInModule": {
             "filename": "lib/webhook.ts",
-            "line": 14
+            "line": 15
           },
           "name": "webhookUrl",
           "type": {
@@ -995,7 +1124,7 @@
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/webhook.ts",
-        "line": 8
+        "line": 9
       },
       "name": "WebhookProps",
       "properties": [
@@ -1004,7 +1133,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/webhook.ts",
-            "line": 9
+            "line": 10
           },
           "name": "eventBus",
           "type": {
@@ -1015,5 +1144,5 @@
     }
   },
   "version": "1.0.0",
-  "fingerprint": "f7egklSkjj/qdbT8Ujuiu1J+dPYlD3AhwNS4wfWWKZQ="
+  "fingerprint": "ezkeaH1OSQPUoIf4qm22s3t7wEDVSsK/feDsqECGBcE="
 }

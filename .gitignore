@@ -1,8 +1,7 @@
-lib/*.js
+*.js
 *.d.ts
 node_modules
 dist
-lambda-dist
 
 .DS_Store
 
@@ -11,3 +10,5 @@ lambda-dist
 cdk.out
 
 tsconfig.json
+
+.parcel-cache

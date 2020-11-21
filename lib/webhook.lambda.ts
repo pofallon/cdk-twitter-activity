@@ -1,38 +1,35 @@
-const AWS = require('aws-sdk')
-const crypto = require('crypto')
-const IPCIDR = require('ip-cidr')
+import * as AWS from 'aws-sdk'
+import * as crypto from 'crypto'
+import { inRange } from 'range_check'
 
 const eventbridge = new AWS.EventBridge()
 
-const cidr1 = new IPCIDR('199.59.148.0/22')
-const cidr2 = new IPCIDR('199.16.156.0/22')
-
-let secret
+let secret: string
 
 const getSecret = async () => {
-  let ssm = new AWS.SSM()
-  let response = await ssm.getParameter({Name: '/twitter/consumer_api_secret_key', WithDecryption: true}).promise()
-  return response.Parameter.Value
+  const ssm = new AWS.SSM()
+  const response = await ssm.getParameter({Name: '/twitter/consumer_api_secret_key', WithDecryption: true}).promise()
+  return response.Parameter?.Value ?? ' '
 }
 
-module.exports.handler = async (event) => {
+const handler = async (event: any) => {
 
-  console.log(event)
+  // console.log(event)
 
   const ip = event.requestContext.http.sourceIp
-  if (!cidr1.contains(ip) && !cidr2.contains(ip)) {
+  if (!inRange(ip,['199.59.148.0/22','199.16.156.0/22'])) {
     return { statusCode: 403 }
   }
 
   secret = secret || await getSecret()
 
   if (event.requestContext.http.method === 'GET') {
-      
+
     const responseBody = {
       response_token: 'sha256=' + crypto.createHmac('sha256', secret).update(event.queryStringParameters.crc_token).digest('base64')
     }
 
-    return { 
+    return {
       statusCode: 200,
       body: JSON.stringify(responseBody)
     };
@@ -48,7 +45,7 @@ module.exports.handler = async (event) => {
     const parsedBody = JSON.parse(event.body)
     const DetailType = Object.keys(parsedBody).find(k => k.endsWith('_events'))
 
-    let results = await eventbridge.putEvents({
+    const results = await eventbridge.putEvents({
       Entries: [
         {
             Detail: event.body,
@@ -59,12 +56,14 @@ module.exports.handler = async (event) => {
       ]
     }).promise()
 
-    if (results.FailedEntryCount > 0) {
-      console.log(results)
+    if (results?.FailedEntryCount) {
+      // console.log(results)
     }
 
     return { statusCode: 200 }
 
   }
 
-};
+}
+
+export { handler }
