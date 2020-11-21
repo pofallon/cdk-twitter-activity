@@ -2,7 +2,10 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.117.1/containers/typescript-node-12
 {
 	"name": "jsii superchain",
-	"image": "jsii/superchain",
+
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
@@ -17,23 +20,18 @@
 	],
 
 	"remoteEnv": {
-		"AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
-		"AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}",
-		"AWS_SESSION_TOKEN": "${localEnv:AWS_SESSION_TOKEN}",
-		"NPM_TOKEN": "${localEnv:NPM_TOKEN}",
-		"NUGET_API_KEY": "${localEnv:NUGET_API_KEY}",
 		"PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/node_modules/.bin",
 	},
 
 	"mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/root/.aws,type=bind"
-]
+  ],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	"postCreateCommand": "set -o vi"
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "node"
