@@ -9,7 +9,7 @@ export class TwitterActivityStack extends cdk.Stack {
     const eventSource = new activity.EventSource(this, 'ActivityEventSource')
 
     // Share the ARN of this EventBus so other stacks can leverage it
-    // tslint:disable-next-line: no-unused-expression
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     new cdk.CfnOutput(this, 'EventBusOutput', {
       description: 'Twitter Activity EventBus ARN',
       exportName: 'twitter-activity-eventbus-arn',

@@ -16,7 +16,7 @@ export class EventSource extends cdk.Construct {
 
     const webhook = new Webhook(this, 'Webhook', { eventBus: this.eventBus })
 
-    // tslint:disable-next-line:no-unused-expression
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     new Subscription(this, 'Subscription', {
       webhookUrl: webhook.webhookUrl
     })

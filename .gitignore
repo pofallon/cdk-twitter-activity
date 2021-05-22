@@ -10,5 +10,4 @@ dist
 cdk.out
 
 tsconfig.json
-
-.parcel-cache
+tsconfig.tsbuildinfo

@@ -35,7 +35,7 @@ export class Subscription extends cdk.Construct {
       logRetention: logs.RetentionDays.ONE_DAY
     })
 
-    // tslint:disable-next-line:no-unused-expression
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     new cfn.CustomResource(this, 'SubscriptionResource', { provider, properties: { webhookUrl } })
 
   }

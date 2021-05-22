@@ -15,7 +15,6 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"dbaeumer.vscode-eslint",
-		"ms-vscode.vscode-typescript-tslint-plugin",
 		"ms-dotnettools.csharp"
 	],
 
@@ -24,7 +23,8 @@
 	},
 
 	"mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/root/.aws,type=bind"
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/root/.aws,type=bind",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/awsso.sh,target=/root/awsso.sh,type=bind"
   ],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

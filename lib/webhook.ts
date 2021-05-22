@@ -26,7 +26,7 @@ export class Webhook extends cdk.Construct {
       timeout: cdk.Duration.seconds(60)
     })
 
-    events.EventBus.grantPutEvents(handler.role!)
+    events.EventBus.grantAllPutEvents(handler.role!)
 
     const parameter = ssm.StringParameter.fromSecureStringParameterAttributes(this, 'ConsumerSecretParameter', {
       parameterName: '/twitter/consumer_api_secret_key',

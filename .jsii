@@ -7,29 +7,27 @@
     "url": "https://www.get2know.io"
   },
   "bundled": {
-    "range_check": "^2.0.3",
+    "range_check": "^2.0.4",
     "twttr": "^2.0.1"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigatewayv2": "^1.73.0",
-    "@aws-cdk/aws-apigatewayv2-integrations": "^1.73.0",
-    "@aws-cdk/aws-cloudformation": "^1.73.0",
-    "@aws-cdk/aws-events": "^1.73.0",
-    "@aws-cdk/aws-lambda": "^1.73.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.73.0",
-    "@aws-cdk/core": "1.73.0",
-    "@aws-cdk/custom-resources": "^1.73.0",
-    "constructs": "^3.2.27"
+    "@aws-cdk/aws-apigatewayv2": "^1.105.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.105.0",
+    "@aws-cdk/aws-cloudformation": "^1.105.0",
+    "@aws-cdk/aws-events": "^1.105.0",
+    "@aws-cdk/aws-lambda": "^1.105.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.105.0",
+    "@aws-cdk/core": "1.105.0",
+    "@aws-cdk/custom-resources": "^1.105.0",
+    "constructs": "^3.3.75"
   },
   "dependencyClosure": {
     "@aws-cdk/assets": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.Assets",
-          "packageId": "Amazon.CDK.Assets",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.Assets"
         },
         "java": {
           "maven": {
@@ -54,11 +52,9 @@
     "@aws-cdk/aws-apigatewayv2": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.APIGatewayv2",
-          "packageId": "Amazon.CDK.AWS.APIGatewayv2",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.APIGatewayv2"
         },
         "java": {
           "maven": {
@@ -83,11 +79,9 @@
     "@aws-cdk/aws-apigatewayv2-integrations": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.APIGatewayv2.Integrations",
-          "packageId": "Amazon.CDK.AWS.APIGatewayv2.Integrations",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.APIGatewayv2.Integrations"
         },
         "java": {
           "maven": {
@@ -112,11 +106,9 @@
     "@aws-cdk/aws-applicationautoscaling": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.ApplicationAutoScaling",
-          "packageId": "Amazon.CDK.AWS.ApplicationAutoScaling",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.ApplicationAutoScaling"
         },
         "java": {
           "maven": {
@@ -141,11 +133,9 @@
     "@aws-cdk/aws-autoscaling-common": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.AutoScaling.Common",
-          "packageId": "Amazon.CDK.AWS.AutoScaling.Common",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.AutoScaling.Common"
         },
         "java": {
           "maven": {
@@ -170,11 +160,9 @@
     "@aws-cdk/aws-certificatemanager": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.CertificateManager",
-          "packageId": "Amazon.CDK.AWS.CertificateManager",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.CertificateManager"
         },
         "java": {
           "maven": {
@@ -199,11 +187,9 @@
     "@aws-cdk/aws-cloudformation": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.CloudFormation",
-          "packageId": "Amazon.CDK.AWS.CloudFormation",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.CloudFormation"
         },
         "java": {
           "maven": {
@@ -228,11 +214,9 @@
     "@aws-cdk/aws-cloudwatch": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.CloudWatch",
-          "packageId": "Amazon.CDK.AWS.CloudWatch",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.CloudWatch"
         },
         "java": {
           "maven": {
@@ -257,11 +241,9 @@
     "@aws-cdk/aws-codeguruprofiler": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.CodeGuruProfiler",
-          "packageId": "Amazon.CDK.AWS.CodeGuruProfiler",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.CodeGuruProfiler"
         },
         "java": {
           "maven": {
@@ -286,11 +268,9 @@
     "@aws-cdk/aws-ec2": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.EC2",
-          "packageId": "Amazon.CDK.AWS.EC2",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.EC2"
         },
         "java": {
           "maven": {
@@ -312,14 +292,66 @@
         }
       }
     },
+    "@aws-cdk/aws-ecr": {
+      "targets": {
+        "dotnet": {
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.ECR",
+          "packageId": "Amazon.CDK.AWS.ECR"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "ecr",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.ecr"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-ecr"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-ecr",
+          "module": "aws_cdk.aws_ecr"
+        }
+      }
+    },
+    "@aws-cdk/aws-ecr-assets": {
+      "targets": {
+        "dotnet": {
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Ecr.Assets",
+          "packageId": "Amazon.CDK.ECR.Assets"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "ecr-assets",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.ecr.assets"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-ecr-assets"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-ecr-assets",
+          "module": "aws_cdk.aws_ecr_assets"
+        }
+      }
+    },
     "@aws-cdk/aws-efs": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.EFS",
-          "packageId": "Amazon.CDK.AWS.EFS",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.EFS"
         },
         "java": {
           "maven": {
@@ -344,11 +376,9 @@
     "@aws-cdk/aws-elasticloadbalancingv2": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.ElasticLoadBalancingV2",
-          "packageId": "Amazon.CDK.AWS.ElasticLoadBalancingV2",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.ElasticLoadBalancingV2"
         },
         "java": {
           "maven": {
@@ -373,11 +403,9 @@
     "@aws-cdk/aws-events": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.Events",
-          "packageId": "Amazon.CDK.AWS.Events",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.Events"
         },
         "java": {
           "maven": {
@@ -402,11 +430,9 @@
     "@aws-cdk/aws-iam": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.IAM",
-          "packageId": "Amazon.CDK.AWS.IAM",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.IAM"
         },
         "java": {
           "maven": {
@@ -431,11 +457,9 @@
     "@aws-cdk/aws-kms": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.KMS",
-          "packageId": "Amazon.CDK.AWS.KMS",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.KMS"
         },
         "java": {
           "maven": {
@@ -460,11 +484,9 @@
     "@aws-cdk/aws-lambda": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.Lambda",
-          "packageId": "Amazon.CDK.AWS.Lambda",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.Lambda"
         },
         "java": {
           "maven": {
@@ -489,11 +511,9 @@
     "@aws-cdk/aws-lambda-nodejs": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.Lambda.Nodejs",
-          "packageId": "Amazon.CDK.AWS.Lambda.Nodejs",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.Lambda.Nodejs"
         },
         "java": {
           "maven": {
@@ -518,11 +538,9 @@
     "@aws-cdk/aws-logs": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.Logs",
-          "packageId": "Amazon.CDK.AWS.Logs",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.Logs"
         },
         "java": {
           "maven": {
@@ -547,11 +565,9 @@
     "@aws-cdk/aws-route53": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.Route53",
-          "packageId": "Amazon.CDK.AWS.Route53",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.Route53"
         },
         "java": {
           "maven": {
@@ -576,11 +592,9 @@
     "@aws-cdk/aws-s3": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.S3",
-          "packageId": "Amazon.CDK.AWS.S3",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.S3"
         },
         "java": {
           "maven": {
@@ -605,11 +619,9 @@
     "@aws-cdk/aws-s3-assets": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.S3.Assets",
-          "packageId": "Amazon.CDK.AWS.S3.Assets",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.S3.Assets"
         },
         "java": {
           "maven": {
@@ -634,11 +646,9 @@
     "@aws-cdk/aws-servicediscovery": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.ServiceDiscovery",
-          "packageId": "Amazon.CDK.AWS.ServiceDiscovery",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.ServiceDiscovery"
         },
         "java": {
           "maven": {
@@ -660,14 +670,39 @@
         }
       }
     },
+    "@aws-cdk/aws-signer": {
+      "targets": {
+        "dotnet": {
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.Signer",
+          "packageId": "Amazon.CDK.AWS.Signer"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "signer",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.signer"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-signer"
+        },
+        "python": {
+          "classifiers": [
+            "Framework :: AWS CDK",
+            "Framework :: AWS CDK :: 1"
+          ],
+          "distName": "aws-cdk.aws-signer",
+          "module": "aws_cdk.aws_signer"
+        }
+      }
+    },
     "@aws-cdk/aws-sns": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.SNS",
-          "packageId": "Amazon.CDK.AWS.SNS",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.SNS"
         },
         "java": {
           "maven": {
@@ -692,11 +727,9 @@
     "@aws-cdk/aws-sqs": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.SQS",
-          "packageId": "Amazon.CDK.AWS.SQS",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.SQS"
         },
         "java": {
           "maven": {
@@ -721,11 +754,9 @@
     "@aws-cdk/aws-ssm": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.AWS.SSM",
-          "packageId": "Amazon.CDK.AWS.SSM",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.SSM"
         },
         "java": {
           "maven": {
@@ -750,11 +781,9 @@
     "@aws-cdk/cloud-assembly-schema": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.CloudAssembly.Schema",
-          "packageId": "Amazon.CDK.CloudAssembly.Schema",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.CloudAssembly.Schema"
         },
         "java": {
           "maven": {
@@ -779,11 +808,9 @@
     "@aws-cdk/core": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK",
-          "packageId": "Amazon.CDK",
-          "signAssembly": true
+          "packageId": "Amazon.CDK"
         },
         "java": {
           "maven": {
@@ -808,11 +835,9 @@
     "@aws-cdk/custom-resources": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.CustomResources",
-          "packageId": "Amazon.CDK.AWS.CustomResources",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.AWS.CustomResources"
         },
         "java": {
           "maven": {
@@ -837,11 +862,9 @@
     "@aws-cdk/cx-api": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.CXAPI",
-          "packageId": "Amazon.CDK.CXAPI",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.CXAPI"
         },
         "java": {
           "maven": {
@@ -866,11 +889,9 @@
     "@aws-cdk/region-info": {
       "targets": {
         "dotnet": {
-          "assemblyOriginatorKeyFile": "../../key.snk",
           "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
           "namespace": "Amazon.CDK.RegionInfo",
-          "packageId": "Amazon.CDK.RegionInfo",
-          "signAssembly": true
+          "packageId": "Amazon.CDK.RegionInfo"
         },
         "java": {
           "maven": {
@@ -898,6 +919,9 @@
           "namespace": "Constructs",
           "packageId": "Constructs"
         },
+        "go": {
+          "moduleName": "github.com/aws/constructs-go"
+        },
         "java": {
           "maven": {
             "artifactId": "constructs",
@@ -917,7 +941,7 @@
   },
   "description": "AWS CDK construct to publish Twitter activity to AWS EventBridge",
   "homepage": "https://github.com/pofallon/cdk-twitter-activity#readme",
-  "jsiiVersion": "1.14.1 (build 828de8a)",
+  "jsiiVersion": "1.29.0 (build 41df200)",
   "keywords": [
     "cdk",
     "twitter",
@@ -1143,6 +1167,6 @@
       ]
     }
   },
-  "version": "1.0.0",
-  "fingerprint": "ezkeaH1OSQPUoIf4qm22s3t7wEDVSsK/feDsqECGBcE="
+  "version": "1.0.1",
+  "fingerprint": "SB5CuXxEiHUZq4lZ0y9qqL2XHV9hGanveiywaSfeCQ8="
 }

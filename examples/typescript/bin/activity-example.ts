@@ -5,5 +5,5 @@ import { TwitterActivityStack } from '../lib/twitter-activity-stack'
 
 const app = new cdk.App()
 
-// tslint:disable-next-line: no-unused-expression
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 new TwitterActivityStack(app, 'TwitterActivity')
